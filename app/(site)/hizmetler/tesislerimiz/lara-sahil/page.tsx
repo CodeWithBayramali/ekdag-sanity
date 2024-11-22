@@ -30,7 +30,7 @@ export default function page() {
               burgerler, makarna tabakları ve et çeşitlerimiz ile siz değerli
               misafirlerimiziplajımızda ağırlarken ilk günden itibaren Covid-19
               virüsü ile ilgili en üst seviyede önlemleralarak, Sağlık
-              Bakanlığı'nın belirlediği kurallar çerçevesinde Sosyal Tesisimizde
+              Bakanlığı{`'`} nın belirlediği kurallar çerçevesinde Sosyal Tesisimizde
               gerekli hijyenve uygulama bildirimlerini gerçekleştirdik.
             </p>
             <div className="flex items-center justify-center">

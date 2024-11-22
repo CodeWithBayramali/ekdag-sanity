@@ -1,4 +1,3 @@
-import SidebarLink from "@/components/Docs/SidebarLink";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -87,10 +86,10 @@ export default function DocsPage() {
                 <p className="text-body-color dark:text-body-color-dark text-base">
                   28 Mayıs 2024 tarihinde yapılan Akdeniz Belediyeler Birliği
                   seçiminde daha önce de dört dönem yürüttüğü Akdeniz Belediyer
-                  Birliği Başkanlığı'na bir kez daha seçildi. 13 Temmuz 2024
-                  tarihinde Antalya'da düzenlenen Uluslararası Sakin Kentler
+                  Birliği Başkanlığı{`'`} na bir kez daha seçildi. 13 Temmuz 2024
+                  tarihinde Antalya{`'`}da düzenlenen Uluslararası Sakin Kentler
                   Birliği {`(Cittaslow)`} Olağanüstü Türkiye Genel Kurul
-                  Toplantısı'nda Cittaslow Türkiye Koordinatörlüğü'ne seçildi.
+                  Toplantısı{`'`} nda Cittaslow Türkiye Koordinatörlüğü{`'`} ne seçildi.
                 </p>
 
                 <p className="text-body-color dark:text-body-color-dark text-base">

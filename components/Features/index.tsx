@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import featuresData from "./featuresData";
-import SingleFeature from "./SingleFeature";
 import SectionHeader from "../Common/SectionHeader";
 import CardItem from "../CardItem";
 

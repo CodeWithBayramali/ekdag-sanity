@@ -1,6 +1,5 @@
 import React from "react";
 import { FeatureTab } from "@/types/index";
-import Image from "next/image";
 import { Swiper,SwiperSlide } from "swiper/react";
 import { EffectFlip } from "swiper/modules";
 import { Autoplay } from "swiper/modules";

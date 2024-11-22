@@ -12,10 +12,10 @@ export default function page() {
             <h1>ATATÜRK PARKI SOSYAL TESİSİ </h1>
 
             <p className="text-body-color dark:text-body-color-dark text-base">
-              Falezlerin omuzlarında, Akdeniz’in eşsiz manzarası ile buluşmanız
+              Falezlerin omuzlarında, Akdeniz{`'`} in eşsiz manzarası ile buluşmanız
               için sizleri Antalya Büyükşehir Belediyesi EKDAĞ Atatürk Parkı
-              Sosyal Tesisi’ne bekliyoruz. Atatürk’ün ‘’dünyanın en güzel
-              şehri’’ olarak andığı Antalya’nın bu güzel manzarasında birlikte
+              Sosyal Tesisi{`'`} ne bekliyoruz. Atatürk{`'`} ün dünyanın en güzel
+              şehri olarak andığı Antalya’nın bu güzel manzarasında birlikte
               bir fincan kahve veya zengin bir kahvaltı ile güne
               başlayabilirsiniz. Günün ilerleyen saatlerinde ise, tesisimizin
               damak zevkinize uygun tertemiz ve lezzetli yemeklerini
@@ -23,10 +23,10 @@ export default function page() {
               izlerken, güneşin altın rengine bürünen denizi seyre dalabilir ve
               sıcacık bir çay eşliğinde içinizi ısıtabilirsiniz. Bu huzur dolu
               anların tadını çıkarırken, sevdiklerinizle birlikte unutulmaz
-              anılar biriktirebilirsiniz. Antalya’nın en güzel köşesinde,
+              anılar biriktirebilirsiniz. Antalya{`'`} nın en güzel köşesinde,
               doğanın ve denizin kucaklaştığı bu özel mekanda birbirinden
               lezzetli yemekler ve geniş içecek yelpazemiz ile siz değerli
-              misafirlerimizi ağırlamaktan büyük mutluluk duyuyoruz. Antalya’nın
+              misafirlerimizi ağırlamaktan büyük mutluluk duyuyoruz. Antalya{`'`} nın
               en güzeline, bu eşsiz deneyime davetlisiniz.
             </p>
             <div className="flex w-full items-center justify-center my-12">

@@ -21,7 +21,7 @@ const Contact = () => {
     e.preventDefault()
 
     try {
-      const response = await fetch("/api/submitForm", {
+       await fetch("/api/submitForm", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

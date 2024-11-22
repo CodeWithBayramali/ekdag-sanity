@@ -13,10 +13,10 @@ export default function page() {
             <h1>HALK EKMEK FABRİKASI</h1>
 
             <p className="text-body-color dark:text-body-color-dark text-base">
-              2006 yılında özelleştirilen Halk Ekmek Fabrikası'nın vatandaşa
+              2006 yılında özelleştirilen Halk Ekmek Fabrikası{`'`} nın vatandaşa
               uygun fiyatlı ekmek vermemesi nedeniyle harekete geçen Başkan
-              Muhittin Böcek, Antalya Büyükşehir Belediyesi'nin öz kaynaklarıyla
-              ekmek üreteceği Halk Ekmek Fabrikası'nı açarak halkımızın
+              Muhittin Böcek, Antalya Büyükşehir Belediyesi{`'`} nin öz kaynaklarıyla
+              ekmek üreteceği Halk Ekmek Fabrikası{`'`} nı açarak halkımızın
               hizmetine sunmuştur.14 şubatta yapımına başlanan HALK EKMEK
               Fabrikası, EKDAĞ A.Ş. tarafından 3 ay gibi kısa bir sürede
               tamamlayarak uygun fiyata kaliteli ekmek üretimine başlamıştır.

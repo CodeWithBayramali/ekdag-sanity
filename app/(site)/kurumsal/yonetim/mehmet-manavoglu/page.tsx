@@ -27,13 +27,13 @@ export default function DocsPage() {
                 <h1>MEHMET MANAVOĞLU</h1>
 
                 <p className="text-body-color dark:text-body-color-dark text-base">
-                  1976 tarihinde Korkuteli'nde doğan Mehmet Manavoğlu,
-                  ilköğretim, ortaöğretim ve lise eğitimlerini Korkuteli'nde
+                  1976 tarihinde Korkuteli{`'`} nde doğan Mehmet Manavoğlu,
+                  ilköğretim, ortaöğretim ve lise eğitimlerini Korkuteli{`'`} nde
                   tamamladı. Korkuteli ilçesinin köklü ve soylu ailelerinden
                   olan Manavoğlu genç yaşlarında aile mesleği olan tarım ve
                   ticaret ile uğraşmaya başlayarak marka tescili ilçemize ait
                   olan elma ve armut yetiştiriciliği yaptı. Manavoğlu yoğun
-                  geçen bu dönemleri içinde STK'larda, partilerde, kamu - kurum
+                  geçen bu dönemleri içinde STK{`'`} larda, partilerde, kamu - kurum
                   ve kuruluşlarında da aktif rol oynayarak siyasi hayatına yön
                   verdi.
                 </p>
@@ -41,18 +41,18 @@ export default function DocsPage() {
                 <p className="text-body-color dark:text-body-color-dark text-base">
                   Bu çerçevede Korkuteli sanayi sitesinde yönetim kurulu
                   üyeleği, Korkuteli sulama birliğinde delege, Korkuteli
-                  Belediye'sinde meclis kâtip üyeliği, meclis üyeliği, imar
+                  Belediye{`'`} sinde meclis kâtip üyeliği, meclis üyeliği, imar
                   komisyon başkanlığı, belediye başkan yardımcılığı, Antalya
-                  Büyükşehir Belediyesi'nde meclis üyeliği, Akdeniz Belediyeler
-                  Birliği'nde genel kurul üyeliği gibi birçok alanda aktif
-                  olarak rol aldı. 1 Haziran 2019'dan-17 Mayıs 2024 yılına kadar
-                  Antalya Büyükşehir Belediyesi Sosyal A.Ş'de yönetim kurulu
+                  Büyükşehir Belediyesi{`'`} nde meclis üyeliği, Akdeniz Belediyeler
+                  Birliği{`'`} nde genel kurul üyeliği gibi birçok alanda aktif
+                  olarak rol aldı. 1 Haziran 2019{`'`} dan-17 Mayıs 2024 yılına kadar
+                  Antalya Büyükşehir Belediyesi Sosyal A.Ş{`'`} de yönetim kurulu
                   üyeliği yaptı.
                 </p>
 
                 <p className="text-body-color dark:text-body-color-dark text-base">
-                  Yoğun geçen siyasi ve iş hayatının tek gayesi Allah'ın
-                  rızasını kazanmak ve sevdası olan Antalya'ya ve Korkuteline
+                  Yoğun geçen siyasi ve iş hayatının tek gayesi Allah{`'`} ın
+                  rızasını kazanmak ve sevdası olan Antalya{`'`} ya ve Korkuteline
                   hizmet etmek olan Mehmet Manavoğlu, inandığı şiar ile birçok
                   önemli projeye ve fikire de yön verdi.
                 </p>
@@ -60,8 +60,8 @@ export default function DocsPage() {
                 <p className="text-body-color dark:text-body-color-dark text-base">
                   Son olarak ise 2024 mahalli idareler seçimleri sonucunda
                   Antalya Büyükşehir Belediye Başkanlığına ikinci dönem seçilen
-                  sayın Muhittin Böcek'in tensipleri ile Büyükşehir'in en büyük
-                  şirketlerinden birisi olan Ekdağ A.Ş.' nin yönetim kurulu
+                  sayın Muhittin Böcek{`'`} in tensipleri ile Büyükşehir{`'`} in en büyük
+                  şirketlerinden birisi olan Ekdağ A.Ş.{`'`} nin yönetim kurulu
                   başkanı olarak görevlendirildi. Hâlâ da bu görevi devam
                   ettiren Manavoğlu evli ve 3 çocuk babasıdır.
                 </p>

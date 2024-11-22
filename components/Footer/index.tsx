@@ -31,7 +31,6 @@ const Footer = () => {
                 viewport={{ once: true }}
                 className="animate_top w-1/2 lg:w-1/4"
               >
-                <a href="/" className="relative">
                   <Image
                     width={110}
                     height={80}
@@ -46,7 +45,6 @@ const Footer = () => {
                     alt="Logo"
                     className="hidden dark:block"
                   />
-                </a>
 
                 <p className="mb-10 mt-5">
                   Antalyanın Gözdesi
@@ -55,12 +53,7 @@ const Footer = () => {
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
                   iletişim
                 </p>
-                <a
-                  href="#"
-                  className="text-itemtitle font-medium text-black dark:text-white"
-                >
                   info@ekdag.com.tr
-                </a>
               </motion.div>
 
               <div className="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">
@@ -88,36 +81,16 @@ const Footer = () => {
 
                   <ul>
                     <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Anasayfa
-                      </a>
+                        <Link href='/'>Anasayfa</Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Kurumsal
-                      </a>
+                    <Link href='/kurumsal'>Kurumsal</Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        İletişim
-                      </a>
+                    <Link href='/iletisim'>İletişim</Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Blog
-                      </a>
+                    <Link href='/blog'>Blog</Link>
                     </li>
                   </ul>
                 </motion.div>

@@ -12,16 +12,16 @@ export default function page() {
             <h1>DÜDEN PARK BALIK ÇARŞISI SOSYAL TESİSİ</h1>
 
             <p className="text-body-color dark:text-body-color-dark text-base">
-              Türkiye’nin en güzel sahil kenti Antalya’nın gözdesi EKDAĞ A.Ş.
+              Türkiye{`'`} nin en güzel sahil kenti Antalya{`'`} nın gözdesi EKDAĞ A.Ş.
               Balık Çarşısı, 2017 yılında Akdeniz ve Toroslar manzaralı Lara
-              Düden Park’ı içerisinde falezlerin üzerinde hizmete açılmıştır.
+              Düden Park{`'`} ı içerisinde falezlerin üzerinde hizmete açılmıştır.
               Ekdağ Sosyal Tesisi Düden Park Balık Çarşısı, Antalya’nın en
               kaliteli ve uygun fiyatlı Sosyal tesisini Antalya’ya kazandırmış
-              olmaktan gurur duymaktayız. Antalya’nın önemli bir balık çarşısı
+              olmaktan gurur duymaktayız. Antalya{`'`} nın önemli bir balık çarşısı
               eksiğini ortadan kaldırmıştır. Ekdağ A.Ş olarak çalışanlarımız ve
               müşterilerimizin sağlığı ve güvenliği önceliğimizdir. İlk günden
               itibaren Covid-19 sürecinde üst seviyede önlemler alarak, Sağlık
-              Bakanlığı'nın belirlediği kurallar ve Dünya Sağlık Örgütü'nün
+              Bakanlığı{`'`} nın belirlediği kurallar ve Dünya Sağlık Örgütü{`'`} nün
               yaptığı uyarılar çerçevesinde Sosyal Tesislerimiz alkol ve paraben
               içermeyen kokusuz, hava ve zeminde etkili insan sağlığına zararı
               olmayacak şekilde dezenfekte edilmektedir. Geniş ferah oturma

@@ -1,7 +1,6 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 import { Feature } from '@/types';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function CardItem({feature}: {feature: Feature}) {
