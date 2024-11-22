@@ -18,6 +18,7 @@ const About = () => {
                   x: -20,
                 },
 
+                
                 visible: {
                   opacity: 1,
                   x: 0,
