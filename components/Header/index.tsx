@@ -153,6 +153,7 @@ const Header = () => {
             </ul>
           </nav>
 
+
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
             <ThemeToggler />
             <Link href='https://www.instagram.com/abbsosyaltesisi/' target="_blank"><BsInstagram className="hover:text-blue-600" size={20} /></Link>
