@@ -79,18 +79,18 @@ const Footer = () => {
                     Site Haritası
                   </h4>
 
-                  <ul>
+                  <ul className="flex flex-col gap-y-3">
                     <li>
-                        <Link href='/'>Anasayfa</Link>
+                        <Link href='/' className="hover:text-blue-600 transition-all">Anasayfa</Link>
                     </li>
                     <li>
-                    <Link href='/kurumsal'>Kurumsal</Link>
+                    <Link href='/kurumsal' className="hover:text-blue-600 transition-all">Kurumsal</Link>
                     </li>
                     <li>
-                    <Link href='/iletisim'>İletişim</Link>
+                    <Link href='/iletisim' className="hover:text-blue-600 transition-all">İletişim</Link>
                     </li>
                     <li>
-                    <Link href='/blog'>Blog</Link>
+                    <Link href='/blog' className="hover:text-blue-600 transition-all">Blog</Link>
                     </li>
                   </ul>
                 </motion.div>

@@ -30,7 +30,7 @@ const About = () => {
               className="animate_left relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
             >
               <Image
-                src="/images/halk-ekmek/Halk-Ekmek-Fabrikası-01.jpg"
+                src="/images/halk-ekmek/Halk-Ekmek-Fabrikasi-01.jpg"
                 alt="About"
                 className="rounded-lg"
                 fill
