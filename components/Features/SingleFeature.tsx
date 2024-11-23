@@ -12,7 +12,7 @@ const dancing_script = Dancing_Script({
 });
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
-  const { icon, title, description } = feature;
+  const { icon, title } = feature;
 
   return (
     <>
@@ -48,7 +48,6 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
               <div className="flex items-center justify-center flex-col gap-y-2 h-full transition-all duration-300">
                 <span className={`${dancing_script.className} text-2xl text-white flex flex-row gap-x-4 transition-transform duration-300 transform`}>
                   <p className="text-orange-400">{title}</p> |
-                  <p className="text-yellow-400">{description}</p>
                 </span>
                 <Link className="bg-orange-500 p-2 px-6 text-xs text-white rounded-full" href='/'>Keşfet</Link>
               </div>
