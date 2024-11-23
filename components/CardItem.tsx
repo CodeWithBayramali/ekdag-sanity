@@ -2,43 +2,61 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import { Feature } from '@/types';
 import Link from 'next/link';
+import { Dancing_Script } from 'next/font/google';
+
+const dancing_script = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
 
 export default function CardItem({feature}: {feature: Feature}) {
-    const { icon, title, description, link } = feature;
+    const { icon, title, ico, link } = feature;
 
     return (
       <>
-        <motion.div
-          variants={{
-            hidden: {
-              opacity: 0,
-              y: -20,
-            },
-  
-            visible: {
-              opacity: 1,
-              y: 0,
-            },
-          }}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 1, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="animate_top rounded-lg bg-white pb-9 shadow-solid-8 dark:bg-blacksection"
-        >
-          <Link href={`${link}`} className="relative block aspect-[368/239]">
-            <img src={icon} alt={title} className='w-full h-[350px]' />
-          </Link>
-  
-          <div className="px-4 text-center">
-            <h3 className="mb-3.5 mt-7.5 line-clamp-2 inline-block text-md text-center font-medium text-black duration-300 hover:text-primary dark:text-white dark:hover:text-primary">
-              <Link href={`${link}`}>
-                {`${title.slice(0, 40)}`}
-              </Link>
-            </h3>
-            <p className="line-clamp-3">{description}</p>
+      <motion.div
+        variants={{
+          hidden: {
+            opacity: 0,
+            y: -20,
+          },
+          visible: {
+            opacity: 1,
+            y: 0,
+          },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 1, delay: 0.5 }}
+        viewport={{ once: true }}
+        className="group relative rounded-lg bg-white pb-9 dark:bg-blacksection overflow-hidden"
+      >
+        {/* Image with Hover Effect */}
+        <Link href={`${link}`} className="relative block aspect-[368/239]">
+          <img
+            src={icon}
+            alt={title}
+            className="w-full h-[350px] rounded-3xl object-cover transition duration-300 group-hover:blur-sm"
+          />
+          {/* Explore Button */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <button className="px-4 py-2 bg-primary text-white font-medium rounded-lg shadow-lg">
+              Keşfet
+            </button>
           </div>
-        </motion.div>
-      </>
+        </Link>
+
+        {/* Content */}
+        <div className="px-4 text-center">
+          <h3 className="mb-3.5 mt-7.5 line-clamp-2 flex flex-row justify-center items-center text-md text-center font-medium text-black duration-300 hover:text-primary dark:text-white dark:hover:text-primary">
+            <img src={ico} className='w-16 h-8' />
+            <Link href={`${link}`} className={`${dancing_script.className} ml-4 font-extrabold text-xl`}>
+              {`${title.slice(0, 40)}`}
+            </Link>
+          </h3>
+        </div>
+      </motion.div>
+    </>
     );
 }

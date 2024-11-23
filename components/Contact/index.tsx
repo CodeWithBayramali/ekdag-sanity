@@ -180,7 +180,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  Phone Number
+                  Telefon
                 </h4>
                 <p>
                   <span>+90 242 311 06 94</span>

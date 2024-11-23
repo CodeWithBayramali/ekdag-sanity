@@ -3,23 +3,30 @@ import { Feature } from '@/types/index'
 const featuresData: Feature[] = [
   {
     id: 1,
-    icon: "/images/yonetim/muhittin-bocek.jpg",
-    title: "Başkanımız | Muhittin BÖCEK",
-    description: "1962 yılında Antalya’nın Konyaaltı ilçesinde doğdu. İlk, orta ve lise eğitimini Antalya’da tamamladı. Yükseköğrenimini Halkla İlişkiler ve İktisat bölümlerinde tamamladı. 25 yıllık siyasi tecrübesini Kamu Yönetimi ve Siyaset Bilimi alanında yüksek lisans mezuniyeti ile taçlandırdı…",
+    icon: "/images/ataturk-park/ataturk-park-sosyal-tesis-3.jpg",
+    title: " | ABB Sosyal Tesisleri",
+    ico:"/ekdag-ekmek-logo-800.png",
     link: "/kurumsal/yonetim/muhittin-bocek"
   },
   {
     id: 2,
-    icon: "/images/yonetim/mehmet-manavoglu.jpg",
-    title: "Yön. Kur. Bşk. | Mehmet Manavoğlu",
-    description:"Sosyal belediyecilik anlayışı gereği, Antalya halkının refah ve huzur seviyesini yükseltmeye yönelik hizmetler, kaliteli bir anlayışla vatandaşımızın kullanımına sunulmaktır.",
-    link:"/kurumsal/yonetim/mehmet-manavoglu"
+    icon: "/images/halk-ekmek/Halk-Ekmek-Fabrikasi-10.jpg",
+    title: " | Halk Ekmek",
+    ico:"/ekdag-ekmek-logo-800.png",
+    link:"/halkekmek"
   },
   {
     id: 3,
-    icon: "/images/yonetim/ahmet-aydin.webp",
-    title: "Genel Md. | Ahmet Aydın",
-    description: "Antalya halkının refah ve huzur düzeyini yükseltmek amacıyla, sosyal belediyecilik anlayışımız doğrultusunda kaliteli hizmetler sunarak vatandaşlarımızın kullanımına sunmaktayız.",
+    icon: "/images/kurutma-tesisi.webp",
+    title: " | Kurutma Tesisi",
+    ico:"/ekdag-ekmek-logo-800.png",
+    link: ""
+  },
+  {
+    id: 3,
+    icon: "/images/bogacay-atolyesi.jpg",
+    title: " | Boğaçayı Atölyesi",
+    ico:"/ekdag-ekmek-logo-800.png",
     link: ""
   },
 ];

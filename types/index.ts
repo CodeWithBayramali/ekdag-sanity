@@ -10,7 +10,7 @@ export type Menu = {
     id: number;
     icon: string;
     title: string;
-    description: string;
+    ico: string;
     link: string;
   };
   
