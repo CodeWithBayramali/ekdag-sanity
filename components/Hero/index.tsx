@@ -14,7 +14,7 @@ const Hero = () => {
       <SwiperSlide className="relative w-full aspect-[14/5]">
         <Image
           fill
-          className=" brightness-75"
+          className=" brightness-90"
           style={{ objectFit: "fill" }}
           src="/images/slider/004.webp"
           alt="ataturk-park-sosyal-tesis-1.jpg"
@@ -24,7 +24,7 @@ const Hero = () => {
       <SwiperSlide className="relative w-full aspect-[14/5]">
         <Image
           fill
-          className=" brightness-75"
+          className=" brightness-90"
           style={{ objectFit: "fill" }}
           src="/images/slider/005.webp"
           alt="ataturk-park-sosyal-tesis-1.jpg"
@@ -34,7 +34,7 @@ const Hero = () => {
       <SwiperSlide className="relative w-full aspect-[14/5]">
         <Image
           fill
-          className=" brightness-75"
+          className=" brightness-90"
           style={{ objectFit: "fill" }}
           src="/images/slider/002.webp"
           alt="ataturk-park-sosyal-tesis-1.jpg"
@@ -44,7 +44,7 @@ const Hero = () => {
       <SwiperSlide className="relative w-full aspect-[14/5]">
         <Image
           fill
-          className=" brightness-75"
+          className=" brightness-90"
           style={{ objectFit: "fill" }}
           src="/images/slider/003.webp"
           alt="ataturk-park-sosyal-tesis-1.jpg"
@@ -54,7 +54,7 @@ const Hero = () => {
       <SwiperSlide className="relative w-full aspect-[14/5]">
         <Image
           fill
-          className=" brightness-75"
+          className=" brightness-90"
           style={{ objectFit: "fill" }}
           src="/images/slider/006.webp"
           alt="ataturk-park-sosyal-tesis-1.jpg"

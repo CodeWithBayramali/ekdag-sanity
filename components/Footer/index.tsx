@@ -236,7 +236,7 @@ const Footer = () => {
               className="animate_top"
             >
               <p>
-                &copy; {new Date().getFullYear()} EKDAĞ  2020 - Tüm hakları EKDAĞ A.Ş.’ye aittir.
+                &copy; {new Date().getFullYear()} EKDAĞ - Tüm hakları EKDAĞ A.Ş.’ye aittir.
               </p>
             </motion.div>
 

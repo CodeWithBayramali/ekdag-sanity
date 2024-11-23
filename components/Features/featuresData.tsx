@@ -6,7 +6,7 @@ const featuresData: Feature[] = [
     icon: "/images/ataturk-park/ataturk-park-sosyal-tesis-3.jpg",
     title: " | ABB Sosyal Tesisleri",
     ico:"/ekdag-ekmek-logo-800.png",
-    link: "/kurumsal/yonetim/muhittin-bocek"
+    link: "/hizmetler/tesislerimiz"
   },
   {
     id: 2,

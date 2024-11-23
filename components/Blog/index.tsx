@@ -11,8 +11,8 @@ const Blog = async () => {
         <div className="animate_top mx-auto text-center">
           <SectionHeader
             headerInfo={{
-              title: `HABERLER & BÜLTEN`,
-              subtitle: `En yeni gelişmeler`,
+              title: `EKDAĞ BLOG`,
+              subtitle: `Blog`,
               description: ``,
             }}
           />

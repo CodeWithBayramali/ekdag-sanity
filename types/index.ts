@@ -23,6 +23,14 @@ export type Menu = {
     image2: string;
     imageDark: string;
   };
+
+  export type Facility = {
+    id: number;
+    title: string;
+    image: string;
+    link: string;
+    iframe: string
+  }
   
   export type Author = {
     name: string;
