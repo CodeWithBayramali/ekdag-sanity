@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BsInstagram } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa6";
@@ -14,7 +13,6 @@ const Header = () => {
   const [dropdownToggler, setDropdownToggler] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
 
-  const pathUrl = usePathname();
 
   // Sticky menu
   const handleStickyMenu = () => {
