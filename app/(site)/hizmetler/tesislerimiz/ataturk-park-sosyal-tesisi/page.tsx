@@ -1,8 +1,14 @@
 import React from "react";
+import Image from "next/image";
 
 export default function page() {
   return (
-    <div className="max-w-c-1390 w-full mx-auto">
+    <>
+       <div className="flex justify-center relative w-full h-[500px] md:aspect-[16/5]">
+        <Image src="/images/ataturk-park/ataturk-park-sosyal-tesis-1.jpg" className="rounded-b-3xl brightness-75" fill alt="ekdag-gozde-logo.jpg" />
+      </div>
+
+      <div className="max-w-c-1390 w-full mx-auto">
       <section className="pb-16 pt-24 md:pb-20 md:pt-28 lg:pb-24 lg:pt-32">
         <div className="w-full px-4">
         <div className="flex w-full items-center justify-center">
@@ -57,5 +63,6 @@ export default function page() {
         </div>
       </section>
     </div>
+    </>
   );
 }

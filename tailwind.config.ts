@@ -12,6 +12,13 @@ export default {
       inter: ["Inter", "sans-serif"],
     },
     extend: {
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px', // Eğer ihtiyacınız varsa
+      },
       colors: {
         current: "currentColor",
         transparent: "transparent",

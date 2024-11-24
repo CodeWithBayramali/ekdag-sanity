@@ -1,6 +1,7 @@
 import BlogData from "@/components/Blog/blogData";
 import BlogItem from "@/components/Blog/BlogItem";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Blog Page - Solid SaaS Boilerplate",
@@ -11,6 +12,9 @@ export const metadata: Metadata = {
 const BlogPage = async () => {
   return (
     <>
+    <div className="flex justify-center relative w-full h-[500px] md:aspect-[16/5]">
+        <Image src="/images/slider/007.webp" className="rounded-b-3xl brightness-75" fill alt="ekdag-gozde-logo.jpg" />
+      </div>
       {/* <!-- ===== Blog Grid Start ===== --> */}
       <section className="py-20 lg:py-25 xl:py-30">
         <div className="mx-auto mt-15 max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0">

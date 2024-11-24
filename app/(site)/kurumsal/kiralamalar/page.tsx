@@ -1,6 +1,7 @@
 import React from "react";
 import SidebarLink from "@/components/Docs/SidebarLink";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Kurumsal | Kiralamalar",
@@ -11,6 +12,9 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <>
+    <div className="flex justify-center relative w-full h-[500px] md:aspect-[16/5]">
+        <Image src="/images/slider/007.webp" className="rounded-b-3xl brightness-75" fill alt="ekdag-gozde-logo.jpg" />
+      </div>
       <section className="pb-16 pt-24 md:pb-20 md:pt-28 lg:pb-24 lg:pt-32">
         <div className="container mx-auto">
           <div className="-mx-4 flex flex-wrap">

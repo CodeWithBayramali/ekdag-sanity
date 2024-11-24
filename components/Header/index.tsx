@@ -34,7 +34,7 @@ const Header = () => {
     className={`fixed left-0 top-0 z-99999 w-full py-7 ${
       stickyMenu
         ? "bg-white !py-4 transition duration-100 shadow-md dark:bg-black"
-        : "!py-4"
+        : "navbar-color !py-4"
     }`}
   >
     <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
@@ -55,8 +55,8 @@ const Header = () => {
             className="w-full dark:hidden"
           />
         </Link>
-
-        {/* <!-- Hamburger Toggle BTN --> */}
+  
+        {/* Hamburger Toggle BTN */}
         <button
           aria-label="hamburger Toggler"
           className="block xl:hidden"
@@ -94,10 +94,10 @@ const Header = () => {
             </span>
           </span>
         </button>
-        {/* <!-- Hamburger Toggle BTN --> */}
+        {/* Hamburger Toggle BTN */}
       </div>
-
-      {/* Nav Menu Start   */}
+  
+      {/* Nav Menu Start */}
       <div
         className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
           navigationOpen &&
@@ -112,12 +112,16 @@ const Header = () => {
                   <>
                     <button
                       onClick={() => setDropdownToggler(!dropdownToggler)}
-                      className="flex cursor-pointer items-center justify-between gap-3 hover:text-primary"
+                      className={`${
+                        stickyMenu ? "text-black" : navigationOpen ? 'text-black': 'text-white'
+                      } uppercase flex cursor-pointer items-center justify-between gap-3 hover:text-primary`}
                     >
                       {menuItem.title}
                       <span>
                         <svg
-                          className="h-3 w-3 cursor-pointer fill-waterloo group-hover:fill-primary"
+                          className={`${
+                            stickyMenu ? "fill-black" : "fill-white"
+                          } h-3 w-3 cursor-pointer group-hover:fill-primary`}
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 512 512"
                         >
@@ -125,7 +129,7 @@ const Header = () => {
                         </svg>
                       </span>
                     </button>
-
+  
                     <ul
                       className={`dropdown ${dropdownToggler ? "flex" : ""}`}
                     >
@@ -139,11 +143,11 @@ const Header = () => {
                 ) : (
                   <Link
                     href={`${menuItem.path}`}
-                    className={
-                      pathUrl === menuItem.path
-                        ? "text-primary hover:text-primary"
-                        : "hover:text-primary"
-                    }
+                    className={`${
+                      stickyMenu
+                        ? "text-black"
+                        : navigationOpen ? "text-black": "text-white"
+                    } hover:text-primary uppercase`}
                   >
                     {menuItem.title}
                   </Link>
@@ -152,18 +156,18 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-
-
-        <div className="mt-7 flex items-center gap-6 xl:mt-0">
+  
+        <div className={`mt-7 flex items-center gap-6 xl:mt-0`}>
           <ThemeToggler />
-          <Link href='https://www.instagram.com/abbsosyaltesisi/' target="_blank"><BsInstagram className="hover:text-blue-600" size={20} /></Link>
-          <Link href='https://www.facebook.com/EKDAG.Tesisleri/'><FaFacebook className="hover:text-blue-600" size={20} /></Link>
-          {/* <Link
-            href="https://nextjstemplates.com/templates/solid"
-            className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
+          <Link
+            href="https://www.instagram.com/abbsosyaltesisi/"
+            target="_blank"
           >
-            Rezervasyon
-          </Link> */}
+            <BsInstagram className={`${stickyMenu ? 'text-black':navigationOpen ? 'text-black':'text-white'}`} size={20} />
+          </Link>
+          <Link href="https://www.facebook.com/EKDAG.Tesisleri/">
+            <FaFacebook className={`${stickyMenu ? 'text-black': navigationOpen ? 'text-black':'text-white'}`} size={20} />
+          </Link>
         </div>
       </div>
     </div>

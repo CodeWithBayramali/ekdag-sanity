@@ -1,14 +1,26 @@
+import Image from "next/image";
 import React from "react";
 
 export default function page() {
   return (
+    <>
+     <div className="flex justify-center relative w-full aspect-[16/5]">
+        <Image src="/images/slider/003.webp" className="rounded-b-3xl brightness-75" fill alt="ekdag-gozde-logo.jpg" />
+      </div>
     <div className="max-w-c-1390 w-full mx-auto">
-      <section className="pb-16 pt-24 md:pb-20 md:pt-28 lg:pb-24 lg:pt-32">
+      <section className="pb-16 md:pb-20 md:pt-28 lg:pb-24 lg:pt-32">
         <div className="w-full px-4">
           
-          <div className="blog-details blog-details-docs shadow-three dark:bg-gray-dark rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
+          <div className="blog-details shadow-three dark:bg-gray-dark rounded-sm px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
           <div className="flex w-full items-center justify-center">
-            <img src="/ekdag-gozde-logo.jpg" />
+          <div className="flex w-full justify-center">
+          <Image
+            src="/ekdag-gozde-logo.jpg"
+            width={200}
+            height={200}
+            alt="ekdag-gozde-logo.jpg"
+          />
+        </div>
           </div>
             <h1>HALK EKMEK FABRİKASI</h1>
 
@@ -51,5 +63,6 @@ export default function page() {
         </div>
       </section>
     </div>
+    </>
   );
 }
