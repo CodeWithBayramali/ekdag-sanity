@@ -3,7 +3,6 @@ import "./globals.css";
 import Lines from "@/components/Lines";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
-import { ThemeProvider } from "next-themes";
 import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ["latin"] });
