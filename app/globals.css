@@ -40,12 +40,18 @@
   }
 }
 
-@media (max-width: 640) {
+@media (max-width: 640px) {
   .custom-swiper {
     @apply mt-[78px]
   }
-  .slider-image-height {
-    @apply h-[400px]
+  .active-mobile {
+    display: block;
+  }
+  .deactive-mobile {
+    display: none;
+  }
+  .slider-image-height-sm {
+    @apply h-[28rem]
   }
   .navbar-color {
     @apply bg-white
@@ -58,10 +64,24 @@
   }
 }
 
+@media (min-width: 641px) {
+  .active-mobile {
+    display: none;
+  }
+  .deactive-mobile {
+    display: block;
+  }
+
+  .slider-image-height-md {
+    height: 41rem; /* Masaüstü için slider yüksekliği */
+  }
+}
+
 @media (max-width: 1280px) {
   .navbar {
     @apply max-h-[400px] overflow-y-scroll;
   }
+  
 }
 
 @layer utilities {

@@ -12,8 +12,12 @@ export const metadata: Metadata = {
 const BlogPage = async () => {
   return (
     <>
-    <div className="flex justify-center relative w-full h-[500px] md:aspect-[16/5]">
-        <Image src="/images/slider/007.webp" className="rounded-b-3xl brightness-75" fill alt="ekdag-gozde-logo.jpg" />
+    <div className="flex justify-center custom-swiper deactive-mobile relative w-full h-[500px] md:aspect-[16/5]">
+        <Image src="/images/slider/slider-md-1.webp" className="rounded-b-3xl brightness-75" fill alt="ekdag-gozde-logo.jpg" />
+      </div>
+
+      <div className="flex justify-center active-mobile custom-swiper relative w-full h-[500px] md:aspect-[16/5]">
+        <Image src="/images/slider/halkslider1.png" className="rounded-b-3xl brightness-75" fill alt="ekdag-gozde-logo.jpg" />
       </div>
       {/* <!-- ===== Blog Grid Start ===== --> */}
       <section className="py-20 lg:py-25 xl:py-30">

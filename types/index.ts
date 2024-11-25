@@ -13,6 +13,11 @@ export type Menu = {
     ico: string;
     link: string;
   };
+
+  export type SliderData= {
+    smImg: string;
+    mdImg: string;
+  }
   
   export type FeatureTab = {
     id: string;

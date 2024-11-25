@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
+import sliderData from "./sliderData";
 
 const Hero = () => {
   return (
@@ -20,18 +21,30 @@ const Hero = () => {
         disableOnInteraction: false, // Kullanıcı müdahale ettiğinde durmasın
       }}
     >
-      <SwiperSlide className="relative ">
-        <div className="relative w-full slider-image-height md:h-[680px] aspect-[16/9]">
+      {
+        sliderData.map((item,index)=> (
+          <SwiperSlide key={index} className="relative">
+        <div className="relative deactive-mobile slider-image-height-md">
           <img
-            className="absolute inset-0 w-full h-full object-cover brightness-50"
-            src="/images/slider/004.webp"
+            className="absolute inset-0 w-full h-full object-cover brightness-75"
+            src={item.mdImg}
+            alt="ataturk-park-sosyal-tesis-1.jpg"
+          />
+        </div>
+        <div className="relative active-mobile slider-image-height-sm">
+          <img
+            className="absolute inset-0 w-full h-full object-cover brightness-75"
+            src={item.smImg}
             alt="ataturk-park-sosyal-tesis-1.jpg"
           />
         </div>
       </SwiperSlide>
+        ))
+      }
+      
 
-      <SwiperSlide className="relative">
-      <div className="relative w-full slider-image-height md:h-[680px] aspect-[16/9]">
+      {/* <SwiperSlide className="relative">
+      <div className="relative w-full slider-image-height-sm">
         <img
           className="absolute inset-0 w-full h-full object-cover brightness-50"
           src="/images/slider/005.webp"
@@ -41,7 +54,7 @@ const Hero = () => {
       </SwiperSlide>
 
       <SwiperSlide className="relative">
-      <div className="relative w-full slider-image-height md:h-[680px] aspect-[16/9]">
+      <div className="relative w-full slider-image-height-sm">
         <img
           className="absolute inset-0 w-full h-full object-cover brightness-50"
           src="/images/slider/002.webp"
@@ -51,7 +64,7 @@ const Hero = () => {
       </SwiperSlide>
 
       <SwiperSlide className="relative">
-      <div className="relative w-full slider-image-height md:h-[680px] aspect-[16/9]">
+      <div className="relative w-[1000px] slider-image-height-sm">
         <img
           className="absolute inset-0 w-full h-full object-cover brightness-50"
           src="/images/slider/003.webp"
@@ -61,14 +74,14 @@ const Hero = () => {
       </SwiperSlide>
 
       <SwiperSlide className="relative">
-      <div className="relative w-full slider-image-height md:h-[680px] aspect-[16/9]">
+      <div className="relative w-full slider-image-height-sm">
         <img
           className="absolute inset-0 w-full h-full object-cover brightness-50"
           src="/images/slider/006.webp"
           alt="ataturk-park-sosyal-tesis-1.jpg"
         />
         </div>
-      </SwiperSlide>
+      </SwiperSlide> */}
     </Swiper>
   );
 };

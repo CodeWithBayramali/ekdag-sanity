@@ -4,9 +4,14 @@ import React from "react";
 export default function page() {
   return (
     <>
-     <div className="flex justify-center relative w-full aspect-[16/5]">
-        <Image src="/images/slider/003.webp" className="rounded-b-3xl brightness-75" fill alt="ekdag-gozde-logo.jpg" />
+     <div className="flex justify-center custom-swiper deactive-mobile relative w-full h-[500px] md:aspect-[16/5]">
+        <Image src="/images/slider/slider-md-1.webp" className="rounded-b-3xl brightness-75" fill alt="ekdag-gozde-logo.jpg" />
       </div>
+
+      <div className="flex justify-center active-mobile custom-swiper relative w-full h-[500px] md:aspect-[16/5]">
+        <Image src="/images/slider/halkslider1.png" className="rounded-b-3xl brightness-75" fill alt="ekdag-gozde-logo.jpg" />
+      </div>
+      
     <div className="max-w-c-1390 w-full mx-auto">
       <section className="pb-16 md:pb-20 md:pt-28 lg:pb-24 lg:pt-32">
         <div className="w-full px-4">

@@ -31,7 +31,7 @@ const Header = () => {
     <header
     className={`fixed left-0 top-0 z-99999 w-full py-7 ${
       stickyMenu
-        ? "bg-white !py-4 transition duration-100 shadow-md dark:bg-black"
+        ? "bg-white !py-4 transition duration-100 shadow-md"
         : "navbar-color !py-4"
     }`}
   >
@@ -156,7 +156,7 @@ const Header = () => {
         </nav>
   
         <div className={`mt-7 flex items-center gap-6 xl:mt-0`}>
-          <ThemeToggler />
+          {/* <ThemeToggler /> */}
           <Link
             href="https://www.instagram.com/abbsosyaltesisi/"
             target="_blank"

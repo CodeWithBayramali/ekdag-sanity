@@ -17,19 +17,13 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning
-        className={`${inter.className} dark:bg-black antialiased`}
+        className={`${inter.className} antialiased`}
       >
-        <ThemeProvider
-          enableSystem={false}
-          attribute="class"
-          defaultTheme="light"
-        >
         <Lines />
         <Header />
         {children}
         <Footer />
         <ScrollToTop />
-        </ThemeProvider>
       </body>
     </html>
   );
