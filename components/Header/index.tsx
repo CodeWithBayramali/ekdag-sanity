@@ -15,7 +15,7 @@ const Header = () => {
 
   // Sticky menu
   const handleStickyMenu = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 30) {
       setStickyMenu(true);
     } else {
       setStickyMenu(false);

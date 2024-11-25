@@ -13,7 +13,7 @@ const BlogPage = async () => {
   return (
     <>
     <div className="flex justify-center custom-swiper deactive-mobile relative w-full h-[500px] md:aspect-[16/5]">
-        <Image src="/images/slider/slider-md-1.webp" className="rounded-b-3xl brightness-75" fill alt="ekdag-gozde-logo.jpg" />
+        <Image src="/images/pages/blog_page.webp" className="rounded-b-3xl brightness-75" fill alt="ekdag-gozde-logo.jpg" />
       </div>
 
       <div className="flex justify-center active-mobile custom-swiper relative w-full h-[500px] md:aspect-[16/5]">

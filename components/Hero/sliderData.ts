@@ -2,20 +2,20 @@ import { SliderData } from "@/types"
 
 const sliderData: SliderData[] = [
     {
-        smImg: "/images/slider/halkslider1.png",
+        smImg: "/images/slider/halkslider1.webp",
         mdImg: "/images/slider/slider-md-1.webp"
     },
     {
-        smImg: "/images/slider/halkslider2.png",
-        mdImg: "/images/slider/slider-md-2.webp"
+        smImg: "/images/slider/halkslider2.webp",
+        mdImg: "/images/slider/002.webp"
     },
     {
-        smImg: "/images/slider/halkslider3.png",
+        smImg: "/images/slider/halkslider3.webp",
         mdImg: "/images/slider/slider-md-3.webp"
     },
     {
-        smImg: "/images/slider/halkslider4.png",
-        mdImg: "/images/slider/slider-md-1.webp"
+        smImg: "/images/slider/plaj_mob_slider.webp",
+        mdImg: "/images/slider/plaj_slider.webp"
     }
 ]
 
