@@ -43,7 +43,7 @@ const menuData: Menu[] = [
               path: "/hizmetler/tesislerimiz/lara-sahil",
             },
             {
-              id: 39,
+              id: 39.11,
               title: "HALK EKMEK FABRİKASI",
               newTab: false,
               path: "/halkekmek",
@@ -53,6 +53,37 @@ const menuData: Menu[] = [
     {
       id: 2.1,
       title: "Kurumsal",
+      newTab: false,
+      submenu: [
+        {
+          id: 38.1,
+          title: "EKDAĞ AŞ",
+          newTab: false,
+          path: "/kurumsal/ekdag-as",
+        },
+        {
+          id: 39.1,
+          title: "YÖNETİM",
+          newTab: false,
+          path: "/kurumsal/yonetim",
+        },
+        {
+          id: 40.1,
+          title: "KİRALAMALAR",
+          newTab: false,
+          path: "/kurumsal/kiralamalar",
+        },
+      ]
+    },
+    {
+      id: 3.1,
+      title: "Haberler",
+      newTab: false,
+      path: "/kurumsal",
+    },
+    {
+      id: 4.1,
+      title: "Galeri",
       newTab: false,
       path: "/kurumsal",
     },

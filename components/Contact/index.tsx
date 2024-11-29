@@ -82,6 +82,7 @@ const Contact = () => {
                     type="text"
                     placeholder="Ad Soyad"
                     name="nameSurname"
+                    required
                     value={formData.nameSurname}
                     onChange={handleChange}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
@@ -90,6 +91,7 @@ const Contact = () => {
                   <input
                     type="email"
                     name="email"
+                    required
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Email Adresi"
@@ -103,6 +105,7 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
+                    required
                     placeholder="Telefon"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
@@ -112,6 +115,7 @@ const Contact = () => {
                   <textarea
                     name="message"
                     value={formData.message}
+                    required
                     onChange={handleChange}
                     placeholder="Mesaj"
                     rows={4}

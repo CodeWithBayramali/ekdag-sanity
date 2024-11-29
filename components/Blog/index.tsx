@@ -12,7 +12,7 @@ const Blog = async () => {
           <SectionHeader
             headerInfo={{
               title: `EKDAĞ BLOG`,
-              subtitle: `Blog`,
+              subtitle: ``,
               description: ``,
             }}
           />

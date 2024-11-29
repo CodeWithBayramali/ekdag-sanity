@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BsInstagram } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
+
 
 import menuData from "./menuData";
 
@@ -11,7 +13,7 @@ const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [dropdownToggler, setDropdownToggler] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
-
+  const [dropdownStates, setDropdownStates] = useState({});
 
   // Sticky menu
   const handleStickyMenu = () => {
@@ -22,16 +24,23 @@ const Header = () => {
     }
   };
 
+  const toggleDropdown = (menuId) => {
+    setDropdownStates((prev) => ({
+      ...prev,
+      [menuId]: !prev[menuId], // İlgili menü durumunu değiştir
+    }));
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
   });
-
+  // boxShadow: 'inset 0 50px 40px -20px rgba(0, 0, 0, 0.8)',
   return (
     <header
     className={`fixed left-0 top-0 z-99999 w-full py-7 ${
       stickyMenu
         ? "bg-white !py-4 transition duration-100 shadow-md"
-        : "navbar-color !py-4"
+        : "md:shadow-[inset_0_50px_45px_-20px_rgba(0,0,0,0.7)] sm:shadow-none !py-4 border-none"
     }`}
   >
     <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
@@ -103,54 +112,54 @@ const Header = () => {
       >
         <nav>
           <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
-            {menuData.map((menuItem, key) => (
-              <li key={key} className={menuItem.submenu && "group relative"}>
-                {menuItem.submenu ? (
-                  <>
-                    <button
-                      onClick={() => setDropdownToggler(!dropdownToggler)}
-                      className={`${
-                        stickyMenu ? "text-black" : navigationOpen ? 'text-black': 'text-white'
-                      } uppercase flex cursor-pointer items-center justify-between gap-3 hover:text-primary`}
-                    >
-                      {menuItem.title}
-                      <span>
-                        <svg
-                          className={`${
-                            stickyMenu ? "fill-black" : "fill-white"
-                          } h-3 w-3 cursor-pointer group-hover:fill-primary`}
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-                        </svg>
-                      </span>
-                    </button>
-  
-                    <ul
-                      className={`dropdown ${dropdownToggler ? "flex" : ""}`}
-                    >
-                      {menuItem.submenu.map((item, key) => (
-                        <li key={key} className="hover:text-primary">
-                          <Link href={item.path || "#"}>{item.title}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </>
-                ) : (
-                  <Link
-                    href={`${menuItem.path}`}
-                    className={`${
-                      stickyMenu
-                        ? "text-black"
-                        : navigationOpen ? "text-black": "text-white"
-                    } hover:text-primary uppercase`}
-                  >
-                    {menuItem.title}
-                  </Link>
-                )}
-              </li>
-            ))}
+          {menuData.map((menuItem) => (
+  <li key={menuItem.id} className={menuItem.submenu && "group relative"}>
+    {menuItem.submenu ? (
+      <>
+        <button
+          onClick={() => toggleDropdown(menuItem.id)}
+          className={`${
+            stickyMenu ? "text-black" : navigationOpen ? 'text-black': 'text-white'
+          } uppercase flex cursor-pointer items-center justify-between gap-3 hover:text-gray-300`}
+        >
+          {menuItem.title}
+          <span>
+            <svg
+              className={`${
+                stickyMenu ? "fill-black" : "fill-white"
+              } h-3 w-3 cursor-pointer group-hover:fill-gray-300`}
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+            </svg>
+          </span>
+        </button>
+
+        <ul
+          className={`dropdown ${dropdownStates[menuItem.id] ? "flex" : ""}`}
+        >
+          {menuItem.submenu.map((item) => (
+            <li key={item.id} className="hover:text-gray-400">
+              <Link href={item.path || "#"}>{item.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </>
+    ) : (
+      <Link
+        href={`${menuItem.path}`}
+        className={`${
+          stickyMenu
+            ? "text-black"
+            : navigationOpen ? "text-black": "text-white"
+        } hover:text-gray-300 uppercase`}
+      >
+        {menuItem.title}
+      </Link>
+    )}
+  </li>
+))}
           </ul>
         </nav>
   
@@ -164,6 +173,9 @@ const Header = () => {
           </Link>
           <Link href="https://www.facebook.com/EKDAG.Tesisleri/">
             <FaFacebook className={`${stickyMenu ? 'text-black': navigationOpen ? 'text-black':'text-white'}`} size={20} />
+          </Link>
+          <Link href="https://twitter.com/abbsosyaltesisi" target="_blank">
+            <FaXTwitter className={`${stickyMenu ? 'text-black': navigationOpen ? 'text-black':'text-white'}`} size={20} />
           </Link>
         </div>
       </div>

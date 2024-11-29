@@ -4,9 +4,9 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: "/images/ataturk-park/ataturk-park-sosyal-tesis-3.jpg",
-    title: " | ABB Sosyal Tesisleri",
+    title: " | Sosyal Tesisler",
     ico:"/ekdag-ekmek-logo-800.png",
-    link: "/hizmetler/tesislerimiz"
+    link: "/hizmetler"
   },
   {
     id: 2,

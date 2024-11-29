@@ -40,6 +40,32 @@
   }
 }
 
+.tweet-container {
+  max-width: 500px; /* Tweet boyutunu sınırlayın */
+  font-size: 10px;  /* Çevreleyen yazı boyutunu küçültün */
+  overflow: hidden; /* Taşmaları önleyin */
+}
+
+.tweet-container iframe {
+  transform: scale(1); /* Tweet boyutunu küçültün */
+  transform-origin: top left; /* Küçültme konumunu ayarlayın */
+}
+
+/* Sayfalama noktalarına stil verme */
+.swiper-pagination-bullet {
+  @apply !w-6 !h-6 !bg-gray-900 !opacity-60 rounded-full mx-1;
+}
+
+/* Aktif sayfalama noktası */
+.swiper-pagination-bullet-active {
+  @apply w-6 h-6 !bg-orange-500;
+}
+
+/* Sayfalama noktalarına hover efekti */
+.swiper-pagination-bullet:hover {
+  @apply w-5 h-5 bg-orange-500;
+}
+
 @media (max-width: 640px) {
   .custom-swiper {
     @apply mt-[78px]
@@ -80,13 +106,18 @@
   .page-md-h {
    @apply h-[35rem]
   }
-
   .logo-sm {
-    @apply h-1/4 w-1/4 
+    @apply h-1/6 w-1/6 
    }
 
   .slider-image-height-md {
     height: 41rem; /* Masaüstü için slider yüksekliği */
+  }
+}
+
+@layer utilities {
+  .custom-swiper .swiper-pagination {
+    @apply bottom-[-20px];
   }
 }
 

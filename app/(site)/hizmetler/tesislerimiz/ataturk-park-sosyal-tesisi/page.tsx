@@ -5,18 +5,18 @@ export default function page() {
   return (
     <>
        <div className="flex justify-center custom-swiper deactive-mobile relative w-full page-md-h">
-        <Image src="/images/pages/ataturk_page.webp" className="rounded-b-3xl brightness-75" fill alt="ekdag-gozde-logo.jpg" />
+        <Image src="/images/pages/ataturk_page.webp" className="brightness-90" fill alt="ekdag-gozde-logo.jpg" />
       </div>
 
       <div className="flex justify-center active-mobile custom-swiper relative w-full page-sm-h">
-        <Image src="/images/pages/ataturk_mob_page.webp" className="rounded-b-3xl brightness-75" fill alt="ekdag-gozde-logo.jpg" />
+        <Image src="/images/pages/ataturk_mob_page.webp" className="brightness-90" fill alt="ekdag-gozde-logo.jpg" />
       </div>
 
       <div className="max-w-c-1390 w-full mx-auto">
-      <section className="pb-16 pt-16 md:pb-20 md:pt-16 lg:pb-24 lg:pt-16">
+      <section className="pb-16 md:pb-20 lg:pb-24">
         <div className="w-full px-4">
         <div className="flex w-full items-center justify-center">
-                <img className="logo-sm" src="/ekdag-gozde-logo.jpg" />
+                <img className="logo-sm py-12" src="/ekdag-ekmek-logo-800.png" />
             </div>
           <div className="blog-details blog-details-docs shadow-three dark:bg-gray-dark rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
             <h1>ATATÜRK PARKI SOSYAL TESİSİ </h1>
@@ -40,9 +40,9 @@ export default function page() {
               en güzeline, bu eşsiz deneyime davetlisiniz.
             </p>
             <div className="flex w-full items-center justify-center my-12">
-                <img className="w-[600px] h-[600px]" src="/images/ataturk-park/image.png" />
+                <img className="w-96 h-96" src="/images/ataturk-park/image.png" />
             </div>
-            <div className="grid grid-cols-3 gap-x-6">
+            <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-y-6 gap-x-6">
             <img
               width={1000}
               height={500}

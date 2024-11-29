@@ -5,6 +5,7 @@ import Feature from "@/components/Features";
 import FeaturesTab from "@/components/FeaturesTab";
 import Hero from "@/components/Hero";
 import News from "@/components/News";
+import Social from "@/components/Social";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -18,10 +19,11 @@ export default function Home() {
    <main>
     <Hero />
     <Feature />
-    <FeaturesTab />
-    <About />
-    <Contact />
     <News />
+    <Social />
+     <FeaturesTab />
+    {/* <About />  */}
+    <Contact />
     <Blog />
    </main>
   );

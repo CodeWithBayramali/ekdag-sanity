@@ -1,3 +1,5 @@
+import { TypedObject } from "sanity";
+
 export type Menu = {
     id: number;
     title: string;
@@ -18,6 +20,20 @@ export type Menu = {
     smImg: string;
     mdImg: string;
   }
+
+  export type Image = {
+    _key: string;
+    _type: string;
+    asset: {
+      _ref: string;
+      _type: string;
+    };
+  };
+
+  export type HomeData = {
+    sliderImages: Image[];
+    sliderResponsiveImages: Image[];
+  };
   
   export type FeatureTab = {
     id: string;
@@ -29,12 +45,25 @@ export type Menu = {
     imageDark: string;
   };
 
+  export type FacilityDetail = {
+    tesisName: string;
+    details: TypedObject[];
+    detailImage: string;
+    images: Image[]
+  }
+
+  export type NewsCard = {
+    _id: string;
+    newsTitle: string;
+    subDesc: string;
+    newsImage: Image
+  }
+
   export type Facility = {
-    id: number;
-    title: string;
-    image: string;
-    link: string;
-    iframe: string
+    _id: string;
+    tesisName: string;
+    cartImage: string;
+    map: string
   }
   
   export type Author = {
