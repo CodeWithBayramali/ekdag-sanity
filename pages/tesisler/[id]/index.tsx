@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import '@/app/globals.css'
 import client, { urlFor } from "@/sanity/lib/client";
 import { FacilityDetail } from "@/types";

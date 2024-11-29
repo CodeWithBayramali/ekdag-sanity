@@ -2,13 +2,8 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import { Feature } from '@/types';
 import Link from 'next/link';
-import { Dancing_Script } from 'next/font/google';
 
-const dancing_script = Dancing_Script({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
+
 
 export default function CardItem({feature}: {feature: Feature}) {
     const { icon, title, ico, link } = feature;

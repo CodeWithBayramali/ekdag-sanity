@@ -4,7 +4,7 @@ import FacilityCard from "@/components/Facility/FacilityCard";
 import Image from "next/image";
 import client from "@/sanity/lib/client";
 
-export default function page() {
+export default function Page() {
 
   const [facilityData,setFacilityData] = useState([])
 
