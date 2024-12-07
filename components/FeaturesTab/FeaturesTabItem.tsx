@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { FeatureTab } from "@/types/index";
 import { Swiper,SwiperSlide } from "swiper/react";
 import { EffectFlip } from "swiper/modules";
 import { Autoplay } from "swiper/modules";
-import client, { urlFor } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/client";
 
 const FeaturesTabItem = ({ featureTab }: { featureTab: FeatureTab }) => {
 

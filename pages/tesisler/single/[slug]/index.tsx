@@ -1,7 +1,7 @@
 import React from "react";
 import '@/app/globals.css';
 import client, { urlFor } from "@/sanity/lib/client";
-import { FacilityDetail, TesisDetailData } from "@/types";
+import { TesisDetailData } from "@/types";
 import { PortableText } from "next-sanity";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";

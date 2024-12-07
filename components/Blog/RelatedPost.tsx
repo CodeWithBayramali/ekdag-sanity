@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import BlogData from "./blogData";
 import { Blog } from "@/types";
 import client, { urlFor } from "@/sanity/lib/client";
 
