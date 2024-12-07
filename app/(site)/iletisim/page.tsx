@@ -1,5 +1,4 @@
 import Contact from "@/components/Contact";
-import SidebarContact from "@/components/SidebarContact";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -20,16 +19,9 @@ export default function DocsPage() {
         <Image src="/images/pages/iletisim_mob_page.webp" className="rounded-b-3xl brightness-75" fill alt="ekdag-gozde-logo.jpg" />
       </div>
       <section className="pb-16 pt-24 md:pb-20 md:pt-28 lg:pb-24 lg:pt-32">
-        <div className="container mx-auto">
-            <div className="w-full px-4 lg:w-1/4">
-              <div className="sticky top-[74px] rounded-lg border border-white p-4 shadow-solid-4  transition-all  dark:border-strokedark dark:bg-blacksection">
-                <ul className="space-y-2">
-                  <SidebarContact />
-                </ul>
-              </div>
-            </div>
+        <div className="max-w-c-1280 w-full mx-auto">
 
-            <div className="w-full px-4 lg:w-3/4">
+            <div className="w-full px-4">
               <div className="blog-details blog-details-docs shadow-three dark:bg-gray-dark rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
                 <h4>Merkez Ofis</h4>
                 <p className="text-body-color dark:text-body-color-dark text-base">

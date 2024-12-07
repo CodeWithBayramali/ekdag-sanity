@@ -174,7 +174,7 @@ const Header = () => {
           >
             <BsInstagram className={`${stickyMenu ? 'text-black':navigationOpen ? 'text-black':'text-white'}`} size={20} />
           </Link>
-          <Link href="https://www.facebook.com/EKDAG.Tesisleri/">
+          <Link href="https://www.facebook.com/EKDAG.Tesisleri/" target="_blank">
             <FaFacebook className={`${stickyMenu ? 'text-black': navigationOpen ? 'text-black':'text-white'}`} size={20} />
           </Link>
           <Link href="https://twitter.com/abbsosyaltesisi" target="_blank">

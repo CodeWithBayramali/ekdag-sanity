@@ -30,7 +30,7 @@ const menuData: Menu[] = [
       id: 3.1,
       title: "Haberler",
       newTab: false,
-      path: "/kurumsal",
+      path: "/news",
     },
     {
       id: 3.1,
@@ -42,7 +42,7 @@ const menuData: Menu[] = [
       id: 4.1,
       title: "Galeri",
       newTab: false,
-      path: "/kurumsal",
+      path: "/galeri",
     },
     {
       id: 2.3,

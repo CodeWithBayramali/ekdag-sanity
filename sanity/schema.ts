@@ -286,6 +286,20 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       ],
     },
 
+    {
+      title: 'GALERİ',
+      name: 'gallery',
+      type: 'document',
+      fields: [
+        {
+          title: 'Galeri Resimleri',
+          name: 'galleryImages',
+          type: 'array',
+          of: [{type: 'image'}]
+        }
+      ]
+    },
+
 
     {
       title: 'ILETISIM',
