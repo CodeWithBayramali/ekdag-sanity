@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import { HomeData } from "@/types";
+import Link from "next/link";
 
 const Hero = () => {
   const [images, setImages] = useState<HomeData[]>([]);
@@ -17,14 +18,22 @@ const Hero = () => {
     const getUrl = async () => {
       const data = await client.fetch(`
         *[_type == "home"]{
-            sliderImages,
-            sliderResponsiveImages
+            sliderImages[]{
+              image,
+              "slug": link-> slug.current
+            },
+            sliderResponsiveImages[]{
+              image,
+              "slug": link-> slug.current
+            }
         }
       `);
       setImages(data);
     };
     getUrl();
   }, []);
+
+  console.log(images)
 
   useEffect(() => {
     const handleResize = () => {
@@ -60,11 +69,13 @@ const Hero = () => {
           {images[0]?.sliderImages?.map((item, index) => (
             <SwiperSlide key={index} className="relative">
               <div className="relative deactive-mobile slider-image-height-md">
+              <Link href={`/news/${item?.slug}`}>
                 <img
                   className="absolute inset-0 w-full h-full object-cover"
-                  src={urlFor(item).url()}
-                  alt={item.asset._ref}
+                  src={urlFor(item.image).url()}
+                  alt={urlFor(item.image).url()}
                 />
+                </Link>
               </div>
             </SwiperSlide>
           ))}
@@ -92,11 +103,13 @@ const Hero = () => {
           {images[0]?.sliderResponsiveImages?.map((item, index) => (
             <SwiperSlide key={index} className="relative">
               <div className="relative active-mobile slider-image-height-sm">
+                <Link href={`/news/${item?.slug}`}>
                 <img
                   className="absolute inset-0 w-full h-full object-cover"
-                  src={urlFor(item).url()}
-                  alt={item.asset._ref}
+                  src={urlFor(item.image).url()}
+                  alt={urlFor(item.image).url()}
                 />
+                </Link>
               </div>
             </SwiperSlide>
           ))}

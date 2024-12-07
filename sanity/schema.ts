@@ -13,13 +13,47 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           title: "Slider Resimler *(1000x1000)",
           name: "sliderImages",
           type: "array",
-          of: [{ type: "image" }],
+          of: [
+            {
+              type: "object",
+              fields: [
+                {
+                  title: "Resim",
+                  name: "image",
+                  type: "image",
+                },
+                {
+                  title: "Bağlantı (Haber)",
+                  name: "link",
+                  type: "reference",
+                  to: [{ type: "news" }], // Haberler şemasıyla referans
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Mobil Slider Resimler",
           name: "sliderResponsiveImages",
           type: "array",
-          of: [{ type: "image" }],
+          of: [
+            {
+              type: "object",
+              fields: [
+                {
+                  title: "Resim",
+                  name: "image",
+                  type: "image",
+                },
+                {
+                  title: "Bağlantı (Haber)",
+                  name: "link",
+                  type: "reference",
+                  to: [{ type: "news" }], // Haberler şemasıyla referans
+                },
+              ],
+            },
+          ],
         },
       ],
     },

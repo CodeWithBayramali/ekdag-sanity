@@ -28,15 +28,12 @@ const BlogPage = () => {
   return (
     <>
     <div className="flex justify-center custom-swiper deactive-mobile relative w-full h-[500px] md:aspect-[16/5]">
-        <Image src="/images/pages/blog_page.webp" className="rounded-b-3xl brightness-75" fill alt="ekdag-gozde-logo.jpg" />
-      </div>
-
-      <div className="flex justify-center active-mobile custom-swiper relative w-full h-[500px] md:aspect-[16/5]">
-        <Image src="/images/slider/halkslider1.png" className="rounded-b-3xl brightness-75" fill alt="ekdag-gozde-logo.jpg" />
+        <Image src="/images/pages/blog_page.webp" fill alt="ekdag-gozde-logo.jpg" />
       </div>
       {/* <!-- ===== Blog Grid Start ===== --> */}
       <section>
-        <div className="mx-auto mt-15 max-w-c-1280 px-4 md:px-8 xl:px-0">
+        <div className="mx-auto mt-24 max-w-c-1280 sm:mt-24 px-4 md:px-8 xl:px-0">
+          <h1 className="text-2xl font-bold text-center">Ekdağ Blog</h1>
           <div className="grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
             {blogs.map((post, key) => (
               <BlogItem key={key} blog={post} />

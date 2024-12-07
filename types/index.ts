@@ -45,8 +45,8 @@ export type Menu = {
   }
 
   export type HomeData = {
-    sliderImages: Image[];
-    sliderResponsiveImages: Image[];
+    sliderImages: {image: Image,slug:string}[];
+    sliderResponsiveImages: {image: Image, slug:string}[];
   };
   
   export type FeatureTab = {
