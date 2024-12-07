@@ -1,4 +1,4 @@
-import type { NewsCard, Slug } from '@/types';
+import type { NewsCard } from '@/types';
 import React from 'react'
 import Link from 'next/link';
 import { motion } from 'framer-motion';

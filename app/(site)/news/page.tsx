@@ -1,7 +1,6 @@
 'use client'
 import NewsCard from "@/components/NewsCard";
 import client from "@/sanity/lib/client";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const BlogPage = () => {

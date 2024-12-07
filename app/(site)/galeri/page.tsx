@@ -3,7 +3,7 @@ import client, { urlFor } from "@/sanity/lib/client";
 import { Image } from "@/types";
 import React, { useEffect, useState } from "react";
 
-export default function page() {
+export default function GalleryPage() {
   const [gallery, setGallery] = useState<{gallery: {galleryImages: Image[]}}| null>(null);
 
   useEffect(() => {
