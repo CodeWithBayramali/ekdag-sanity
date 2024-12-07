@@ -1,3 +1,4 @@
+import Contact from "@/components/Contact";
 import SidebarContact from "@/components/SidebarContact";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -20,7 +21,6 @@ export default function DocsPage() {
       </div>
       <section className="pb-16 pt-24 md:pb-20 md:pt-28 lg:pb-24 lg:pt-32">
         <div className="container mx-auto">
-          <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-1/4">
               <div className="sticky top-[74px] rounded-lg border border-white p-4 shadow-solid-4  transition-all  dark:border-strokedark dark:bg-blacksection">
                 <ul className="space-y-2">
@@ -61,8 +61,8 @@ export default function DocsPage() {
                 Bahcelievler mah Hızır Reis cadesi No1/1, Konyaalti, 07050 Muratpasa/Antalya - 0530 505 58 26
                 </p>
               </div>
+              <Contact />
             </div>
-          </div>
         </div>
       </section>
     </>

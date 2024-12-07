@@ -45,6 +45,7 @@ export default function Page() {
           {facilityData.map((item, index) => (
             <FacilityCard key={index} facility={item} />
           ))}
+          
         </div>
       </div>
     </>

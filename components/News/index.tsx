@@ -16,7 +16,7 @@ export default function News() {
     const getUrl = async () => {
       const data = await client.fetch(`
         *[_type == "news"]{
-          _id,
+          slug,
           newsTitle,
           subDesc,
           newsImage
@@ -32,7 +32,7 @@ export default function News() {
           <SectionHeader
             headerInfo={{
               title: `HABERLER & BÜLTEN`,
-              subtitle: `En yeni gelişmeler`,
+              subtitle: ``,
               description: ``,
             }}
           />
@@ -51,7 +51,7 @@ export default function News() {
                   <p className="mb-6">
                     {item.subDesc}
                   </p>
-                  <Link href='/' className='border rounded-full py-1.5 px-4 transition-all hover:bg-black hover:text-white'>Detay</Link>
+                  <Link href={`/news/${item?.slug.current}`} className='border rounded-full py-1.5 px-4 transition-all hover:bg-black hover:text-white'>Detay</Link>
                 </div>
 
                 <div className="animate_right hidden md:w-1/2 lg:block">
@@ -61,12 +61,6 @@ export default function News() {
                       <Image
                         className="shadow-solid-l dark:hidden rounded-lg"
                         src={urlFor(item.newsImage).url()}
-                        alt="Hero"
-                        fill
-                      />
-                      <Image
-                        className="hidden shadow-solid-l dark:block rounded-lg"
-                        src="/images/ataturkpark.jpg"
                         alt="Hero"
                         fill
                       />

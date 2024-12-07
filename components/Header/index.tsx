@@ -111,14 +111,16 @@ const Header = () => {
       >
         <nav>
           <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
-          {menuData.map((menuItem) => (
-  <li key={menuItem.id} className={menuItem.submenu && "group relative"}>
+          {menuData.map((menuItem, index) => (
+  <li key={index} className={menuItem.submenu && "group relative"}>
     {menuItem.submenu ? (
       <>
         <button
-          onClick={() => toggleDropdown(menuItem.id)}
+          onClick={() => {
+            toggleDropdown(menuItem.id);
+          }}
           className={`${
-            stickyMenu ? "text-black" : navigationOpen ? 'text-black': 'text-white'
+            stickyMenu ? "sm:text-black md:text-black" : "sm:text-black md:text-white"
           } uppercase flex cursor-pointer items-center justify-between gap-3 hover:text-gray-300`}
         >
           {menuItem.title}
@@ -135,23 +137,25 @@ const Header = () => {
           </span>
         </button>
 
-        <ul
-          className={`dropdown ${dropdownStates[menuItem.id] ? "flex" : ""}`}
-        >
+        <ul className={`dropdown ${dropdownStates[menuItem.id] ? "flex" : ""}`}>
           {menuItem.submenu.map((item) => (
-            <li key={item.id} className="hover:text-gray-400">
-              <Link href={item.path || "#"}>{item.title}</Link>
+            <li key={item.id} className={`${stickyMenu ? 'sm:text-black md:text-black':'sm:text-black md:text-black'}`}>
+              <Link
+                onClick={() => setNavigationOpen(false)} // Menü kapanır
+                href={item.path || "#"}
+              >
+                {item.title}
+              </Link>
             </li>
           ))}
         </ul>
       </>
     ) : (
       <Link
+        onClick={() => setNavigationOpen(false)} // Menü kapanır
         href={`${menuItem.path}`}
         className={`${
-          stickyMenu
-            ? "text-black"
-            : navigationOpen ? "text-black": "text-white"
+          stickyMenu ? "sm:text-black md:text-black" : "sm:text-black md:text-white"
         } hover:text-gray-300 uppercase`}
       >
         {menuItem.title}

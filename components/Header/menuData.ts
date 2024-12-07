@@ -8,49 +8,6 @@ const menuData: Menu[] = [
       path: "/",
     },
     {
-      id: 3,
-      title: "Hizmetler",
-      newTab: false,
-      submenu: [
-            {
-              id: 35,
-              title: "ATATÜRK PARKI SOSYAL TESİSİ",
-              newTab: false,
-              path: "/hizmetler/tesislerimiz/ataturk-park-sosyal-tesisi",
-            },
-            {
-              id: 36,
-              title: "DÜDEN BALIK ÇARŞISI",
-              newTab: false,
-              path: "/hizmetler/tesislerimiz/duden-balik-carsisi-sosyal-tesisi",
-            },
-            {
-              id: 37,
-              title: "BÜYÜKŞEHİR BELEDİYESİ KAFETERYA",
-              newTab: false,
-              path: "/hizmetler/tesislerimiz/buyuksehir-belediyesi-kafeterya",
-            },
-            {
-              id: 38,
-              title: "KONYAALTI SAHİL PLAJI",
-              newTab: false,
-              path: "/hizmetler/tesislerimiz/konyaalti-sahil-plaji",
-            },
-            {
-              id: 39,
-              title: "LARA SAHİL PLAJI",
-              newTab: false,
-              path: "/hizmetler/tesislerimiz/lara-sahil",
-            },
-            {
-              id: 39.11,
-              title: "HALK EKMEK FABRİKASI",
-              newTab: false,
-              path: "/halkekmek",
-            },
-      ],
-    },
-    {
       id: 2.1,
       title: "Kurumsal",
       newTab: false,
@@ -62,16 +19,10 @@ const menuData: Menu[] = [
           path: "/kurumsal/ekdag-as",
         },
         {
-          id: 39.1,
-          title: "YÖNETİM",
-          newTab: false,
-          path: "/kurumsal/yonetim",
-        },
-        {
           id: 40.1,
-          title: "KİRALAMALAR",
+          title: "BAŞKANIMIZ",
           newTab: false,
-          path: "/kurumsal/kiralamalar",
+          path: "/kurumsal/yonetim/muhittin-bocek",
         },
       ]
     },
@@ -80,6 +31,12 @@ const menuData: Menu[] = [
       title: "Haberler",
       newTab: false,
       path: "/kurumsal",
+    },
+    {
+      id: 3.1,
+      title: "Kiralamalar",
+      newTab: false,
+      path: "/kurumsal/kiralamalar",
     },
     {
       id: 4.1,

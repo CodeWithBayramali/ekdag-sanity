@@ -1,15 +1,30 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Autoplay,Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SectionHeader from '../Common/SectionHeader'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
-import socialData from './socialData'
 
 import 'swiper/css'
 import 'swiper/css/autoplay'
+import client from '@/sanity/lib/client'
+import type { Social } from '@/types'
 
 export default function Social() {
+
+  const [socialData,setSocialData] = useState<Social[]>([])
+
+  useEffect(()=> {
+    const getUrl = async () => {
+      const data = await client.fetch(`
+        *[_type == "twitter"]{
+          tweetId,
+        }`);
+        setSocialData(data);
+    };
+    getUrl();
+  },[])
+
   return (
     <div className='bg-gray-100' 
     style={{

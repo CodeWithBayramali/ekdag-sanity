@@ -1,12 +1,29 @@
 "use client";
-import React from "react";
-import featuresData from "./featuresData";
+import React, { useEffect, useState } from "react";
 import SectionHeader from "../Common/SectionHeader";
 import CardItem from "../CardItem";
 import Image from "next/image";
+import client from "@/sanity/lib/client";
+import HomeTesisCardItem from "../HomeTesisCardItem";
 
 
 const Feature = () => {
+
+  const [homeTesisData,setHomeTesisData] = useState([])
+
+  useEffect(()=> {
+    const getUrl = async () => {
+      const data = await client.fetch(`
+        *[_type == "homePageTesis"]{
+          slug,
+          tesisName,
+          tesisCardImage
+        }`);
+        setHomeTesisData(data);
+    };
+    getUrl();
+  },[])
+
   return (
     <>
       {/* <!-- ===== Features Start ===== --> */}
@@ -31,8 +48,8 @@ const Feature = () => {
             
           <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-4 lg:mt-15 lg:grid-cols-4 xl:mt-20 xl:gap-6">
             {/* <!-- Features item Start --> */}
-
-            {featuresData.map((feature, key) => (
+            <HomeTesisCardItem />
+            {homeTesisData.map((feature, key) => (
               <CardItem feature={feature} key={key} />
             ))}
             {/* <!-- Features item End --> */}

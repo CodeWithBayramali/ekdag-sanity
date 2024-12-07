@@ -1,5 +1,4 @@
 import Blog from "@/components/Blog";
-import Contact from "@/components/Contact";
 import Feature from "@/components/Features";
 import FeaturesTab from "@/components/FeaturesTab";
 import Hero from "@/components/Hero";
@@ -22,7 +21,6 @@ export default function Home() {
     <Social />
      <FeaturesTab />
     {/* <About />  */}
-    <Contact />
     <Blog />
    </main>
   );

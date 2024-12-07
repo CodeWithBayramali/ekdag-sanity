@@ -17,12 +17,11 @@ export default function DocsPage() {
       <div className="flex justify-center active-mobile custom-swiper relative w-full page-sm-h">
         <Image src="/images/pages/kurumsal_mob_page.webp" className="rounded-b-3xl brightness-75" fill alt="ekdag-gozde-logo.jpg" />
       </div>
-      <section className="pb-16 pt-24 md:pb-20 md:pt-28 lg:pb-24 lg:pt-32">
+      <section className="pb-16 md:pb-20 lg:pb-24">
         <div className="container mx-auto">
-          <div className="-mx-4 flex flex-wrap">
           
 
-            <div className="px-4 max-w-c-1390 w-full mx-auto">
+            <div className="max-w-c-1280 w-full mx-auto">
               <div className="blog-details blog-details-docs shadow-three dark:bg-gray-dark rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
                 <h1>Ekdağ A.Ş.</h1>
 
@@ -71,7 +70,6 @@ export default function DocsPage() {
                 </p>
               </div>
             </div>
-          </div>
         </div>
       </section>
     </>

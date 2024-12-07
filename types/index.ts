@@ -1,3 +1,4 @@
+import { SanityAsset } from "@sanity/image-url/lib/types/types";
 import { TypedObject } from "sanity";
 
 export type Menu = {
@@ -9,9 +10,10 @@ export type Menu = {
   };
 
   export type Feature = {
-    id: number;
-    icon: string;
-    title: string;
+    tesisName: string;
+    slug: Slug;
+    tesisCardImage: string;
+    tesisDetail: string;
     ico: string;
     link: string;
   };
@@ -30,19 +32,28 @@ export type Menu = {
     };
   };
 
+  export type TesisDetailData = {
+    tesisName: string;
+    tesisDetailImage: Image,
+    tesisDetail: TypedObject[];
+    tesisImages: Image[]
+  }
+
+  export type Social = {
+    tweetTitle: string;
+    tweetId: string;
+  }
+
   export type HomeData = {
     sliderImages: Image[];
     sliderResponsiveImages: Image[];
   };
   
   export type FeatureTab = {
-    id: string;
     title: string;
-    desc1: string;
-    desc2: string;
-    image: string;
-    image2: string;
-    imageDark: string;
+    description: string;
+    img1: string;
+    img2: string;
   };
 
   export type FacilityDetail = {
@@ -52,8 +63,16 @@ export type Menu = {
     images: Image[]
   }
 
+  export type NewsDetail = {
+    newsTitle: string;
+    newsSubDesc: string;
+    newsImage: Image;
+    newsDescription: TypedObject[]
+    createdAt: string;
+  }
+
   export type NewsCard = {
-    _id: string;
+    slug: Slug;
     newsTitle: string;
     subDesc: string;
     newsImage: Image
@@ -73,16 +92,18 @@ export type Menu = {
     _id?: number | string;
     _ref?: number | string;
   };
+
+  export type Slug = {
+    _type: string,
+    current: string
+  }
   
   export type Blog = {
-    _id: number;
-    title: string;
-    slug?: any;
-    metadata?: string;
-    body?: string;
-    mainImage?: any;
-    author?: Author;
-    tags?: string[];
-    publishedAt?: string;
+    blogTitle: string;
+    subTitle?: any;
+    slug: Slug;
+    blogImage: SanityAsset;
+    blogDescription: TypedObject;
+    createdAt?: string;
   };
   

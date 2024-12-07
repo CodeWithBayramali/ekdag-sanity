@@ -26,7 +26,7 @@ export default function FacilityCard({ facility }: { facility: Facility }) {
         whileInView="visible"
         transition={{ duration: 1, delay: 0.5 }}
         viewport={{ once: true }}
-        className="group relative rounded-lg bg-white pb-9 dark:bg-blacksection overflow-hidden"
+        className="group relative rounded-lg pb-9 dark:bg-blacksection overflow-hidden"
       >
         {/* Image with Hover Effect */}
         <Link href={`/tesisler/${_id}`} className="relative block aspect-[368/239]">
@@ -50,13 +50,13 @@ export default function FacilityCard({ facility }: { facility: Facility }) {
               href={`/tesisler/${_id}`}
               className={`ml-4 font-extrabold text-xl text-orange-500`}
             >
-              {`${tesisName.slice(0, 40)}`}
+              {`${tesisName}`}
             </Link>
 
             {/* Map Icon */}
             <GrMapLocation
-              size={24}
-              className="text-indigo-600 cursor-pointer"
+              size={32}
+              className="text-white bg-indigo-600 p-1.5 rounded-full cursor-pointer"
               onClick={handleOpenModal} // Modal açılır
             />
           </h3>

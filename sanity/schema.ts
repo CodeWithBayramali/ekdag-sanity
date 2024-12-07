@@ -10,7 +10,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       type: "document",
       fields: [
         {
-          title: "Slider Resimler",
+          title: "Slider Resimler *(1000x1000)",
           name: "sliderImages",
           type: "array",
           of: [{ type: "image" }],
@@ -24,9 +24,81 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       ],
     },
 
+    {
+      title: 'ANASAYFA TESİSLERİ',
+      name: "homePageTesis",
+      type: "document",
+      fields: [
+        {
+          title: "Tesis Adı",
+          name: "tesisName",
+          type: "string"
+        },
+        {
+          title: "Slug",
+          name: "slug",
+          type: "slug",
+          options: {
+            source: 'tesisName',
+            maxLength: 96
+          }
+        },
+        {
+          title: "Tesis Kart Resmi",
+          name: "tesisCardImage",
+          type: "image"
+        },
+        {
+          title: "Tesis Detay Resmi",
+          name: "tesisDetailImage",
+          type: "image"
+        },
+        {
+          title: "Tesis Detay Yazısı",
+          name: "tesisDetail",
+          type: "array",
+          of: [{type: "block"}]
+        },
+        {
+          title: "Resimler",
+          name: "tesisImages",
+          type: "array",
+          of: [{type:"image"}]
+        }
+      ]
+    },
 
     {
-      title: "TESİSLER",
+      title: "FEATURES TAB",
+      name: "featuresTab",
+      type: "document",
+      fields: [
+        {
+          title: "Başlık",
+          name: "title",
+          type: "string"
+        },
+        {
+          title: "Açıklama",
+          name: "description",
+          type: "string"
+        },
+        {
+          title: "Resim 1",
+          name: "img1",
+          type: "image"
+        },
+        {
+          title: "Resim 2",
+          name: "img2",
+          type: "image"
+        },
+      ]
+    },
+
+
+    {
+      title: "SOSYAL TESİSLER",
       name: "tesisler",
       type: "document",
       fields: [
@@ -77,6 +149,15 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           type: "string",
         },
         {
+          title: "Slug",
+          name: "slug",
+          type: "slug",
+          options: {
+            source: 'newsTitle',
+            maxLength: 96
+          }
+        },
+        {
           title: "Alt Açıklama",
           name: "subDesc",
           type: "string",
@@ -92,7 +173,16 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           type: "array", // Burayı array olarak değiştiriyoruz
           of: [{ type: "block" }], // Block tipi array içinde olacak
         },
+        {
+          title: "Oluşturma Tarihi",
+          name: "createdAt",
+          type: "date",
+          readOnly: true
+        }
       ],
+      initialValue: () => ({
+        createdAt: new Date().toISOString().split('T')[0]
+      })
     },
 
 
@@ -107,6 +197,20 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           type: "string",
         },
         {
+          title: "Slug",
+          name: "slug",
+          type: "slug",
+          options: {
+            source: 'blogTitle',
+            maxLength: 96
+          }
+        },
+        {
+          title: "Alt Başlık (Opsiyonel)",
+          name: "subTitle",
+          type: "string",
+        },
+        {
           title: "Blog Resmi",
           name: "blogImage",
           type: "image",
@@ -117,7 +221,16 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           type: "array", // Burayı array olarak değiştiriyoruz
           of: [{ type: "block" }], // Block tipi array içinde olacak
         },
+        {
+          title: "Oluşturma Tarihi",
+          name: "createdAt",
+          type: "date",
+          readOnly: true
+        }
       ],
+      initialValue: () => ({
+        createdAt: new Date().toISOString().split('T')[0]
+      })
     },
 
 
@@ -126,6 +239,11 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       name: "twitter",
       type: "document",
       fields: [
+        {
+          title: "Tweet Title",
+          name: "tweetTitle",
+          type: "string"
+        },
         {
           title: "Tweet ID",
           name: "tweetId",
