@@ -13,23 +13,23 @@ export default async function handler(req, res) {
 
     // const bearer = new TwitterApi(process.env.NEXT_PUBLIC_TWITTER_BEARER_TOKEN as string);
     const twitterClient = client.readWrite;
-    const userId = '3732317835'
     
     const tweet = async() => {
       try{
-       const response =  await twitterClient.v2.userTimeline(userId, {
+       const response =  await twitterClient.v2.userTimeline(process.env.NEXT_PUBLIC_USER_ID_TWITTER as string, {
           max_results: 5
          })
+          
+         console.log(response)
          res.status(200).json(response.data)
       }catch(err) {
         console.log('V2Err: ',err)
       }
     }
-     const cronTweet = new CronJob("30 * * * * *", async() => {
-        tweet()
-     })
-     cronTweet.start()
-    }
+        const tweetCron = new CronJob('30 * * * * *', async()=> {
+          tweet()
+        })
+        tweetCron.start()
     // try {
     //   const tweets = await client.get('statuses/user_timeline', {
     //     screen_name: '1865436805773791232alidrkk', // Buraya kendi kullanıcı adınızı girin
@@ -39,5 +39,5 @@ export default async function handler(req, res) {
     // } catch (error) {
     //   res.status(500).json({ error: error.message });
     // }
-  
+      }
 }

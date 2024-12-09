@@ -3,28 +3,29 @@ import React, { useEffect, useState } from 'react'
 import { Autoplay,Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SectionHeader from '../Common/SectionHeader'
+import { TwitterTweetEmbed } from 'react-twitter-embed' 
+
 
 import 'swiper/css'
 import 'swiper/css/autoplay'
 import type { Social } from '@/types'
+import client from '@/sanity/lib/client'
 
 export default function Social() {
 
-  const [tweets, setTweets] = useState([]);
+  const [tweets, setTweets] = useState<Social[]>([]);
 
   useEffect(() => {
-    const fetchTweets = async () => {
-     
-        const response = await fetch('/api/tweet');
-        if (!response.ok) throw new Error('API error');
-        const data = await response.json();
-        setTweets(data);
-    
-    };
-
-    fetchTweets();
+    const getTweet = async () =>{
+      const data = await client.fetch(`
+        *[_type == "twitter"]{
+          tweetId
+        }`);
+        setTweets(data)
+    }
+    getTweet()
   }, []);
-  console.log(tweets)
+
   return (
     <div className='bg-gray-100' 
     style={{
@@ -71,7 +72,7 @@ export default function Social() {
         {tweets.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="mb-12 tweet-container">
-              {item}
+              <TwitterTweetEmbed tweetId={item.tweetId} />
             </div>
           </SwiperSlide>
         ))}
