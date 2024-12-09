@@ -11,7 +11,7 @@ const client = new TwitterApi({
 export default async function handler(req, res) {
   if (req.method === 'GET') {
 
-    const bearer = new TwitterApi(process.env.NEXT_PUBLIC_TWITTER_BEARER_TOKEN as string);
+    // const bearer = new TwitterApi(process.env.NEXT_PUBLIC_TWITTER_BEARER_TOKEN as string);
     const twitterClient = client.readWrite;
     const userId = '3732317835'
     
