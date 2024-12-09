@@ -11,18 +11,15 @@ import type { Social } from '@/types'
 export default function Social() {
 
   const [tweets, setTweets] = useState([]);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchTweets = async () => {
-      try {
+     
         const response = await fetch('/api/tweet');
         if (!response.ok) throw new Error('API error');
         const data = await response.json();
         setTweets(data);
-      } catch (err) {
-        setError(err.message);
-      }
+    
     };
 
     fetchTweets();
