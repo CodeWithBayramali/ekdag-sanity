@@ -12,7 +12,7 @@ export default function Page() {
     const getUrl = async () => {
       const data = await client.fetch(`
         *[_type == "tesisler"]{
-          _id,
+          slug,
           tesisName,
           cartImage,
           map

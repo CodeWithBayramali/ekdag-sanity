@@ -29,7 +29,7 @@ export default function CardItem({feature}: {feature: Feature}) {
         className="group relative rounded-lg pb-9 dark:bg-blacksection overflow-hidden"
       >
         {/* Image with Hover Effect */}
-        <Link href={`/tesisler/single/${slug.current}`} className="relative block aspect-[368/239]">
+        <Link href={`/tesisler/main/${slug.current}`} className="relative block aspect-[368/239]">
           {
             tesisCardImage ? (
               <img
@@ -51,7 +51,7 @@ export default function CardItem({feature}: {feature: Feature}) {
         <div className="px-4 text-center">
           <h3 className="mb-3.5 mt-7.5 line-clamp-2 flex flex-row justify-center items-center text-md text-center font-medium text-black duration-300 hover:text-primary dark:text-white dark:hover:text-primary">
             <img src={'/ekdag-ekmek-logo-800.png'} className='w-14 h-7' />
-            <Link href={`/tesisler/single/${slug.current}`} className={`ml-4 font-extrabold text-xl`}>
+            <Link href={`/tesisler/main/${slug.current}`} className={`ml-4 font-extrabold text-xl`}>
               {tesisName}
             </Link>
           </h3>

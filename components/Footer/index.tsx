@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { BsInstagram } from "react-icons/bs";
-import { FaFacebook } from "react-icons/fa6";
+import { FaFacebook,FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -126,7 +126,9 @@ const Footer = () => {
                     <li>
                     <Link href='https://www.facebook.com/EKDAG.Tesisleri/'><FaFacebook className="hover:text-blue-600" size={32} /></Link>
                     </li>
-                   
+                    <Link href="https://twitter.com/abbsosyaltesisi" target="_blank">
+                        <FaXTwitter size={20} />
+                    </Link>
                   </ul>
                 </motion.div>
 

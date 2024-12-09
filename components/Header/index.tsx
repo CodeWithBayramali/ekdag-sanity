@@ -38,7 +38,7 @@ const Header = () => {
     <header
     className={`fixed left-0 top-0 z-99999 w-full py-7 ${
       stickyMenu
-        ? "bg-white !py-4 transition duration-100 shadow-md"
+        ? "bg-white !py-4 bg-opacity-70 backdrop-blur-md transition duration-100 shadow-md"
         : "md:shadow-[inset_0_50px_45px_-20px_rgba(0,0,0,0.7)] sm:shadow-none !py-4 border-none"
     }`}
   >
@@ -70,29 +70,29 @@ const Header = () => {
           <span className="relative block h-5.5 w-5.5 cursor-pointer">
             <span className="absolute right-0 block h-full w-full">
               <span
-                className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-[0] duration-200 ease-in-out dark:bg-white ${
+                className={`bg-white relative left-0 top-0 my-1 block h-0.5 rounded-sm delay-[0] duration-200 ease-in-out ${
                   !navigationOpen ? "!w-full delay-300" : "w-0"
                 }`}
               ></span>
               <span
-                className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-150 duration-200 ease-in-out dark:bg-white ${
+                className={`bg-white relative left-0 top-0 my-1 block h-0.5 rounded-sm delay-150 duration-200 ease-in-out ${
                   !navigationOpen ? "delay-400 !w-full" : "w-0"
                 }`}
               ></span>
               <span
-                className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-200 duration-200 ease-in-out dark:bg-white ${
+                className={`bg-white relative left-0 top-0 my-1 block h-0.5 rounded-sm delay-200 duration-200 ease-in-out ${
                   !navigationOpen ? "!w-full delay-500" : "w-0"
                 }`}
               ></span>
             </span>
             <span className="du-block absolute right-0 h-full w-full rotate-45">
               <span
-                className={`absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-black delay-300 duration-200 ease-in-out dark:bg-white ${
+                className={`bg-white absolute left-2.5 top-0 block h-full w-0.5 rounded-sm delay-300 duration-200 ease-in-out ${
                   !navigationOpen ? "!h-0 delay-[0]" : "h-full"
                 }`}
               ></span>
               <span
-                className={`delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-black duration-200 ease-in-out dark:bg-white ${
+                className={`bg-white delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm duration-200 ease-in-out ${
                   !navigationOpen ? "!h-0 delay-200" : "h-0.5"
                 }`}
               ></span>
@@ -106,7 +106,7 @@ const Header = () => {
       <div
         className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
           navigationOpen &&
-          "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+          "navbar !visible mt-4 h-auto max-h-fit rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
         }`}
       >
         <nav>
@@ -119,16 +119,12 @@ const Header = () => {
           onClick={() => {
             toggleDropdown(menuItem.id);
           }}
-          className={`${
-            stickyMenu ? "sm:text-black md:text-black" : "sm:text-black md:text-white"
-          } uppercase flex cursor-pointer items-center justify-between gap-3 hover:text-gray-300`}
+          className={`${stickyMenu ? 'text-black': navigationOpen ? 'text-black':'text-white'} uppercase font-medium flex transition-all cursor-pointer items-center justify-between gap-3 hover:text-gray-300`}
         >
           {menuItem.title}
           <span>
             <svg
-              className={`${
-                stickyMenu ? "fill-black" : "fill-white"
-              } h-3 w-3 cursor-pointer group-hover:fill-gray-300`}
+              className={`${stickyMenu ? 'fill-black': navigationOpen ? 'fill-black':'fill-white'} h-3 w-3 cursor-pointer group-hover:fill-gray-300`}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -154,9 +150,7 @@ const Header = () => {
       <Link
         onClick={() => setNavigationOpen(false)} // Menü kapanır
         href={`${menuItem.path}`}
-        className={`${
-          stickyMenu ? "sm:text-black md:text-black" : "sm:text-black md:text-white"
-        } hover:text-gray-300 uppercase`}
+        className={`${stickyMenu ? 'text-black': navigationOpen ? 'text-black':'text-white'} transition-all font-medium hover:text-gray-300 uppercase`}
       >
         {menuItem.title}
       </Link>

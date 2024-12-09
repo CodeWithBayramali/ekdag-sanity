@@ -34,9 +34,9 @@ export type Menu = {
 
   export type TesisDetailData = {
     tesisName: string;
-    tesisDetailImage: Image,
-    tesisDetail: TypedObject[];
-    tesisImages: Image[]
+    details: TypedObject[];
+    detailImage: Image;
+    images: Image[]
   }
 
   export type Social = {
@@ -58,9 +58,10 @@ export type Menu = {
 
   export type FacilityDetail = {
     tesisName: string;
-    details: TypedObject[];
-    detailImage: string;
-    images: Image[]
+    slug: Slug;
+    tesisDetail: TypedObject[];
+    tesisDetailImage: string;
+    tesisImages: Image[]
   }
 
   export type NewsDetail = {
@@ -79,7 +80,7 @@ export type Menu = {
   }
 
   export type Facility = {
-    _id: string;
+    slug: Slug;
     tesisName: string;
     cartImage: string;
     map: string

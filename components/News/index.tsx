@@ -27,11 +27,11 @@ export default function News() {
   },[])
 
   return (
-    <div className='bg-gray-50'>
+    <div className='bg-[#fcffe0]'>
     <div className="animate_top pt-12 mx-auto text-center">
           <SectionHeader
             headerInfo={{
-              title: `HABERLER & BÜLTEN`,
+              title: `HABERLER`,
               subtitle: ``,
               description: ``,
             }}

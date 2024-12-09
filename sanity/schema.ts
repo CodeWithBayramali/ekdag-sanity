@@ -142,6 +142,15 @@ export const schema: { types: SchemaTypeDefinition[] } = {
             type: 'string'
           },
           {
+            title: "Slug",
+            name: "slug",
+            type: "slug",
+            options: {
+              source: 'tesisName',
+              maxLength: 96
+            }
+          },
+          {
             title: 'Tesis Kart Resmi',
             name: 'cartImage',
             type: 'image'

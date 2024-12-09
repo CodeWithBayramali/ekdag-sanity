@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 export async function getServerSideProps({ params }: { params: { slug: string } }) {
   // Sanity'den veri çekiyoruz
   const data = await client.fetch(
-    `*[_type == "homePageTesis" && slug.current == $slug][0]`,
+    `*[_type == "tesisler" && slug.current == $slug][0]`,
     { slug: params.slug }
   );
 
@@ -23,12 +23,7 @@ export async function getServerSideProps({ params }: { params: { slug: string } 
   // Boş veya undefined değerleri güvenli bir şekilde işleme
   return {
     props: {
-      facilityData: {
-        ...data,
-        tesisImages: data.tesisImages || [], // Varsayılan olarak boş dizi
-        tesisDetail: data.tesisDetail || null, // Varsayılan olarak null
-        tesisDetailImage: data.tesisDetailImage || null, // Varsayılan olarak null
-      },
+      facilityData: data
     },
   };
 }
@@ -52,11 +47,11 @@ const TesisPage: React.FC<Props> = ({ facilityData }) => {
           <div className="w-full px-4">
             <div className="blog-details mt-18 blog-details-docs shadow-three dark:bg-gray-dark rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
               {/* Tesis İsmi */}
-              <h1>{facilityData?.tesisName || "Tesis Bilgisi Bulunamadı"}</h1>
+              <h1>{facilityData?.tesisName}</h1>
 
               {/* Tesis Detayları */}
-              {facilityData?.tesisDetail ? (
-                <PortableText value={facilityData.tesisDetail} />
+              {facilityData?.details ? (
+                <PortableText value={facilityData.details} />
               ) : (
                 <p>Tesis detay bilgisi mevcut değil.</p>
               )}
@@ -64,10 +59,10 @@ const TesisPage: React.FC<Props> = ({ facilityData }) => {
               {/* Ana Görsel */}
               <div className="flex w-full items-center justify-center my-12">
                {
-                facilityData.tesisDetailImage ? (
+                facilityData.detailImage ? (
                   <img
                   className="w-96 h-96"
-                  src={urlFor(facilityData.tesisDetailImage).url()}
+                  src={urlFor(facilityData.detailImage).url()}
                   alt="AnaGorsel.png"
                 />
                 ):(null)
@@ -76,8 +71,8 @@ const TesisPage: React.FC<Props> = ({ facilityData }) => {
 
               {/* Tesis Fotoğrafları */}
               <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-y-6 gap-x-6">
-                {facilityData?.tesisImages.length > 0 ? (
-                  facilityData.tesisImages.map((item, index) => (
+                {facilityData?.images.length > 0 ? (
+                  facilityData.images.map((item, index) => (
                     <img
                       key={index}
                       width={1000}

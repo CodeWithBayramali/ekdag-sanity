@@ -3,28 +3,31 @@ import React, { useEffect, useState } from 'react'
 import { Autoplay,Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SectionHeader from '../Common/SectionHeader'
-import { TwitterTweetEmbed } from 'react-twitter-embed'
 
 import 'swiper/css'
 import 'swiper/css/autoplay'
-import client from '@/sanity/lib/client'
 import type { Social } from '@/types'
 
 export default function Social() {
 
-  const [socialData,setSocialData] = useState<Social[]>([])
+  const [tweets, setTweets] = useState([]);
+  const [error, setError] = useState(null);
 
-  useEffect(()=> {
-    const getUrl = async () => {
-      const data = await client.fetch(`
-        *[_type == "twitter"]{
-          tweetId,
-        }`);
-        setSocialData(data);
+  useEffect(() => {
+    const fetchTweets = async () => {
+      try {
+        const response = await fetch('/api/tweet');
+        if (!response.ok) throw new Error('API error');
+        const data = await response.json();
+        setTweets(data);
+      } catch (err) {
+        setError(err.message);
+      }
     };
-    getUrl();
-  },[])
 
+    fetchTweets();
+  }, []);
+  console.log(tweets)
   return (
     <div className='bg-gray-100' 
     style={{
@@ -35,7 +38,7 @@ export default function Social() {
           backgroundPosition: "center",
       }}>
     <div className='max-w-c-1390 w-full mx-auto'>
-    <div className="animate_top pt-12 mx-auto text-center">
+    <div className="animate_top pt-6 mx-auto text-center">
           <SectionHeader
             headerInfo={{
               title: `SOSYAL MEDYA`,
@@ -56,11 +59,11 @@ export default function Social() {
             spaceBetween: 10,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 20,
           },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 30,
           },
         }}
@@ -68,10 +71,10 @@ export default function Social() {
         className='custom-swiper'
       >
         {/* Swiper İçeriği */}
-        {socialData.map((item, index) => (
+        {tweets.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="mb-12 tweet-container mx-3">
-              <TwitterTweetEmbed tweetId={item.tweetId} />
+            <div className="mb-12 tweet-container">
+              {item}
             </div>
           </SwiperSlide>
         ))}

@@ -9,7 +9,7 @@ import { urlFor } from '@/sanity/lib/client';
 
 
 export default function FacilityCard({ facility }: { facility: Facility }) {
-  const { cartImage, tesisName, map, _id } = facility;
+  const { cartImage, tesisName, map, slug } = facility;
   const [isModalOpen, setModalOpen] = useState(false);
 
   const handleOpenModal = () => setModalOpen(true);
@@ -29,7 +29,7 @@ export default function FacilityCard({ facility }: { facility: Facility }) {
         className="group relative rounded-lg pb-9 dark:bg-blacksection overflow-hidden"
       >
         {/* Image with Hover Effect */}
-        <Link href={`/tesisler/${_id}`} className="relative block aspect-[368/239]">
+        <Link href={`/tesisler/single/${slug.current}`} className="relative block aspect-[368/239]">
           <img
             src={urlFor(cartImage).url()}
             alt={cartImage}
@@ -47,7 +47,7 @@ export default function FacilityCard({ facility }: { facility: Facility }) {
         <div className="px-4 text-center">
           <h3 className="mb-3.5 mt-7.5 line-clamp-2 gap-x-6 flex flex-row justify-center items-center text-md text-center font-medium text-black duration-300 hover:text-primary dark:text-white dark:hover:text-primary">
             <Link
-              href={`/tesisler/${_id}`}
+              href={`/tesisler/single/${slug.current}`}
               className={`ml-4 font-extrabold text-xl text-orange-500`}
             >
               {`${tesisName}`}

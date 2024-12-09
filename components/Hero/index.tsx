@@ -9,6 +9,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import { HomeData } from "@/types";
 import Link from "next/link";
+import Image from "next/image";
 
 const Hero = () => {
   const [images, setImages] = useState<HomeData[]>([]);
@@ -32,8 +33,6 @@ const Hero = () => {
     };
     getUrl();
   }, []);
-
-  console.log(images)
 
   useEffect(() => {
     const handleResize = () => {
@@ -68,10 +67,13 @@ const Hero = () => {
         >
           {images[0]?.sliderImages?.map((item, index) => (
             <SwiperSlide key={index} className="relative">
-              <div className="relative deactive-mobile slider-image-height-md">
+              <div className="relative deactive-mobile">
               <Link href={`/news/${item?.slug}`}>
-                <img
-                  className="absolute inset-0 w-full h-full object-cover"
+                <Image
+                width={1000}
+                height={500}
+                objectFit="center"
+                layout="responsive"
                   src={urlFor(item.image).url()}
                   alt={urlFor(item.image).url()}
                 />
@@ -102,10 +104,13 @@ const Hero = () => {
         >
           {images[0]?.sliderResponsiveImages?.map((item, index) => (
             <SwiperSlide key={index} className="relative">
-              <div className="relative active-mobile slider-image-height-sm">
+              <div className="relative active-mobile">
                 <Link href={`/news/${item?.slug}`}>
-                <img
-                  className="absolute inset-0 w-full h-full object-cover"
+                <Image
+                width={1000}
+                height={500}
+                objectFit="center"
+                layout="responsive"
                   src={urlFor(item.image).url()}
                   alt={urlFor(item.image).url()}
                 />
