@@ -13,7 +13,6 @@ export default async function handler(req, res) {
 
     const bearer = new TwitterApi(process.env.NEXT_PUBLIC_TWITTER_BEARER_TOKEN as string);
     const twitterClient = client.readWrite;
-    const twitterBearer = bearer.readOnly;
     const userId = '3732317835'
     
     const tweet = async() => {
