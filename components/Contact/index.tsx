@@ -2,6 +2,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React, {useState} from "react";
+import { CiMail } from "react-icons/ci";
+import { CiPhone } from "react-icons/ci";
+
+
 
 const Contact = () => {
 
@@ -168,26 +172,27 @@ const Contact = () => {
               className="animate_top w-full md:w-2/5 md:p-7.5 lg:w-[26%] xl:pt-15"
             >
 
-              <div className="5 mb-7">
-                <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  Merkez Ofis
-                </h3>
-                <p>Meltem Mah. Dumlupınar Cad.Atatürk Kültür Merkezi İçi No: 199/1 Muratpaşa / ANTALYA</p>
-              </div>
-              <div className="5 mb-7">
-                <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  Email Adresi
-                </h3>
+              
+              <div className="5 mb-7 flex flex-row">
+              <CiMail  className="text-blue-950 h-7 w-7 "/>
+              <h2 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
+                   
+                </h2>
+                <br /> 
+              
                 <p>
                   <a href="#">info@ekdag.com.tr</a>
                 </p>
               </div>
-              <div>
-                <h4 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  Telefon
-                </h4>
+              <div className=" mb-7 flex flex-row">
+              <CiPhone className="text-blue-950 h-7 w-7"/>
+
+                <h2 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
+                 
+                </h2>
+
                 <p>
-                  <span>+90 242 311 06 94</span>
+                +90 242 311 06 94
                 </p>
               </div>
             </motion.div>

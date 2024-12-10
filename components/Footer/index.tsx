@@ -124,7 +124,7 @@ const Footer = () => {
                     <Link href='https://www.instagram.com/abbsosyaltesisi/' target="_blank"><BsInstagram className="hover:text-blue-600" size={32} /></Link>
                     </li>
                     <li>
-                    <Link href='https://www.facebook.com/EKDAG.Tesisleri/'><FaFacebook className="hover:text-blue-600" size={32} /></Link>
+                    <Link target="_blank" href='https://www.facebook.com/EKDAG.Tesisleri/'><FaFacebook className="hover:text-blue-600" size={32} /></Link>
                     </li>
                     <Link href="https://twitter.com/abbsosyaltesisi" target="_blank">
                         <FaXTwitter size={20} />

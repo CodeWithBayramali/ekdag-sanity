@@ -134,17 +134,7 @@ export default {
         "solid-12": "0px 2px 10px rgba(0, 0, 0, 0.05)",
         "solid-13": "0px 2px 19px rgba(0, 0, 0, 0.05)",
       },
-      keyframes: {
-        line: {
-          "0%, 100%": { transform: "translateY(100%)" },
-          "50%": { transform: "translateY(0)" },
-        },
-      },
-      animation: {
-        line1: "line 3s linear infinite",
-        line2: "line 6s linear infinite",
-        line3: "line 9s linear infinite",
-      },
+      
     },
   },
   plugins: [],

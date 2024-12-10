@@ -1,6 +1,7 @@
 import Blog from "@/components/Blog";
 import Feature from "@/components/Features";
 import FeaturesTab from "@/components/FeaturesTab";
+import FooterTop from "@/components/FooterTop";
 import Hero from "@/components/Hero";
 import News from "@/components/News";
 import Social from "@/components/Social";
@@ -22,6 +23,7 @@ export default function Home() {
      <FeaturesTab />
     {/* <About />  */}
     <Blog />
+    <FooterTop />
    </main>
   );
 }

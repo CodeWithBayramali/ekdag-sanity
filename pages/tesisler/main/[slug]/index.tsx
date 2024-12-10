@@ -55,7 +55,7 @@ export async function getServerSideProps({ params }: { params: { slug: Slug } })
                 <div className="flex w-full items-center justify-center my-12">
                   <img
                     className="w-96 h-96"
-                    src="/images/ataturk-park/image.png"
+                    src={urlFor(facilityData.tesisDetailImage).url()}
                   />
                 </div>
                 <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-y-6 gap-x-6">

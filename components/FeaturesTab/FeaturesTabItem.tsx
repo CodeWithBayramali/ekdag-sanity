@@ -7,7 +7,6 @@ import { urlFor } from "@/sanity/lib/client";
 
 const FeaturesTabItem = ({ featureTab }: { featureTab: FeatureTab }) => {
 
-  
   return (
     <>
       <div className="flex items-center gap-8 lg:gap-19">

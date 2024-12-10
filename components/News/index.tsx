@@ -27,7 +27,7 @@ export default function News() {
   },[])
 
   return (
-    <div className='bg-[#fcffe0]'>
+    <div className='bg-[#65b9fe] bg-opacity-10'>
     <div className="animate_top pt-12 mx-auto text-center">
           <SectionHeader
             headerInfo={{

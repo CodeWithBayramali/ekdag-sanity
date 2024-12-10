@@ -71,8 +71,8 @@ export default function Social() {
         {/* Swiper İçeriği */}
         {tweets.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="mb-12 tweet-container">
-              <TwitterTweetEmbed tweetId={item.tweetId} />
+            <div className="mb-16 tweet-container">
+              <TwitterTweetEmbed tweetId={item.tweetId} options={{align:'end',height:'50%'}} />
             </div>
           </SwiperSlide>
         ))}

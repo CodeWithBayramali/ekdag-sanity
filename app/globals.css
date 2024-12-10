@@ -46,9 +46,11 @@
   overflow: hidden; /* Taşmaları önleyin */
 }
 
-.tweet-container iframe {
+.tweet-container article {
   transform: scale(1); /* Tweet boyutunu küçültün */
-  transform-origin: top left; /* Küçültme konumunu ayarlayın */
+  transform-origin: top center; /* Küçültme konumunu ayarlayın */
+  height: 400px !important;
+  padding: 30px !important;
 }
 
 /* Sayfalama noktalarına stil verme */

@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import SectionHeader from "../Common/SectionHeader";
 import CardItem from "../CardItem";
 import Image from "next/image";
 import client from "@/sanity/lib/client";
@@ -40,13 +39,8 @@ const Feature = () => {
           <div className="flex w-full items-center justify-center">
               <Image src="/ekdag-ekmek-logo-800.png" width={150} height={150} alt="ekdag-logo-800.png" />
             </div>
-            <SectionHeader headerInfo={{
-              title: '',
-              subtitle: 'Ekdağ Tesislerini Keşfedin',
-              description: `Zengin ürün içerikleri ve her ihtiyaca uygun konseptleriyle Ekdağ, Antalya'nın dört bir köşesinde sizinle!`
-            }} />
             
-          <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-4 lg:mt-15 lg:grid-cols-4 xl:mt-20 xl:gap-6">
+          <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-3 lg:mt-15 lg:grid-cols-4 xl:mt-20 xl:gap-6">
             {/* <!-- Features item Start --> */}
             <HomeTesisCardItem />
             {homeTesisData.map((feature, key) => (

@@ -18,7 +18,6 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${inter.className} antialiased`}
       >
-        <Lines />
         <Header />
         {children}
         <Footer />

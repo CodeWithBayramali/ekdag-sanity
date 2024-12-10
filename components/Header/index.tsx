@@ -70,30 +70,30 @@ const Header = () => {
           <span className="relative block h-5.5 w-5.5 cursor-pointer">
             <span className="absolute right-0 block h-full w-full">
               <span
-                className={`bg-white relative left-0 top-0 my-1 block h-0.5 rounded-sm delay-[0] duration-200 ease-in-out ${
-                  !navigationOpen ? "!w-full delay-300" : "w-0"
+                className={`xl:bg-white lg:bg-black sm:bg-black md:bg-black relative left-0 top-0 my-1 block h-0.5 rounded-sm delay-[0] duration-200 ease-in-out ${
+                  !navigationOpen ? "!w-full delay-300 bg-black" : "w-0"
                 }`}
               ></span>
               <span
-                className={`bg-white relative left-0 top-0 my-1 block h-0.5 rounded-sm delay-150 duration-200 ease-in-out ${
-                  !navigationOpen ? "delay-400 !w-full" : "w-0"
+                className={`xl:bg-white lg:bg-black sm:bg-black md:bg-black relative left-0 top-0 my-1 block h-0.5 rounded-sm delay-150 duration-200 ease-in-out ${
+                  !navigationOpen ? "delay-400 !w-full bg-black" : "w-0"
                 }`}
               ></span>
               <span
-                className={`bg-white relative left-0 top-0 my-1 block h-0.5 rounded-sm delay-200 duration-200 ease-in-out ${
-                  !navigationOpen ? "!w-full delay-500" : "w-0"
+                className={`xl:bg-white lg:bg-black sm:bg-black md:bg-black relative left-0 top-0 my-1 block h-0.5 rounded-sm delay-200 duration-200 ease-in-out ${
+                  !navigationOpen ? "!w-full delay-500 bg-black" : "w-0"
                 }`}
               ></span>
             </span>
             <span className="du-block absolute right-0 h-full w-full rotate-45">
               <span
-                className={`bg-white absolute left-2.5 top-0 block h-full w-0.5 rounded-sm delay-300 duration-200 ease-in-out ${
-                  !navigationOpen ? "!h-0 delay-[0]" : "h-full"
+                className={`xl:bg-white lg:bg-black sm:bg-black md:bg-black absolute left-2.5 top-0 block h-full w-0.5 rounded-sm delay-300 duration-200 ease-in-out ${
+                  !navigationOpen ? "!h-0 delay-[0] bg-black" : "h-full bg-black"
                 }`}
               ></span>
               <span
-                className={`bg-white delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm duration-200 ease-in-out ${
-                  !navigationOpen ? "!h-0 delay-200" : "h-0.5"
+                className={`xl:bg-white lg:bg-black sm:bg-black md:bg-black delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm duration-200 ease-in-out ${
+                  !navigationOpen ? "!h-0 delay-200 bg-black" : "h-0.5 bg-black"
                 }`}
               ></span>
             </span>

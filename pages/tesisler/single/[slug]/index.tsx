@@ -62,7 +62,7 @@ const TesisPage: React.FC<Props> = ({ facilityData }) => {
                 facilityData.detailImage ? (
                   <img
                   className="w-96 h-96"
-                  src={urlFor(facilityData.detailImage).url()}
+                  src={urlFor(facilityData?.detailImage).url()}
                   alt="AnaGorsel.png"
                 />
                 ):(null)
@@ -71,8 +71,8 @@ const TesisPage: React.FC<Props> = ({ facilityData }) => {
 
               {/* Tesis Fotoğrafları */}
               <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-y-6 gap-x-6">
-                {facilityData?.images.length > 0 ? (
-                  facilityData.images.map((item, index) => (
+                {
+                  facilityData?.images.map((item, index) => (
                     <img
                       key={index}
                       width={1000}
@@ -80,10 +80,7 @@ const TesisPage: React.FC<Props> = ({ facilityData }) => {
                       src={urlFor(item).url()}
                       alt={`Tesis Fotoğrafı ${index + 1}`}
                     />
-                  ))
-                ) : (
-                  <p>Tesis fotoğrafları bulunamadı.</p>
-                )}
+                  ))}
               </div>
             </div>
           </div>
